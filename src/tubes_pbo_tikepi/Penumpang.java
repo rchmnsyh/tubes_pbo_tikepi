@@ -1,5 +1,10 @@
 package tubes_pbo_tikepi;
 
+/**
+ *
+ * @author wira
+ */
+
 public class Penumpang extends Manusia {
     private String idPenumpang;
     private String email;

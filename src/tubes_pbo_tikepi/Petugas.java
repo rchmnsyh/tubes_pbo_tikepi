@@ -1,5 +1,10 @@
 package tubes_pbo_tikepi;
 
+/**
+ *
+ * @author wira
+ */
+
 public class Petugas extends Manusia {
     private String idPetugas;
     
@@ -28,6 +33,11 @@ public class Petugas extends Manusia {
     }
     
     public void verifikasi(Tiket tik, String idPenumpang){
-        System.out.println("yuhu");
+        String idTik = tik.getIdPenumpang();
+        if (idTik == idPenumpang){
+            System.out.println("Verified");
+        }else{
+            System.out.println("ID Doesn't match, please try again");
+        }
     }
 }
