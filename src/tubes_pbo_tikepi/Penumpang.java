@@ -15,19 +15,21 @@ public class Penumpang extends Manusia {
      */
     
     public Penumpang(String idPenumpang, String nama, String jenisKelamin, String tglLahir,
-            String noHp, String alamat){
+            String noHp, String alamat, String email){
         this.idPenumpang = idPenumpang;
         this.nama = nama;
         this.jenisKelamin = jenisKelamin;
         this.tanggalLahir = tglLahir;
         this.noHp = noHp;
         this.alamat = alamat;
+        this.email = email;
     }
     
-    Penumpang(String idPenumpang, String nama, String tglLahir){
+    Penumpang(String idPenumpang, String nama, String tglLahir, String email){
         this.idPenumpang = idPenumpang;
         this.nama = nama;
         this.tanggalLahir = tglLahir;
+        this.email = email;
     }
 
     public String getIdPenumpang() {

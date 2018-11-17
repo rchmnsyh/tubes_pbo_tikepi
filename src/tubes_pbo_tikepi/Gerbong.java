@@ -15,6 +15,7 @@ public class Gerbong {
     private int noGerbong;
     private String statusGerbong;
     private int kapasitasGerbong;
+    private Kursi[] kursiGerbong;
 
     public Gerbong(String idGerbong, String idKereta, int noGerbong, String statusGerbong, int kapasitasGerbong) {
         this.idGerbong = idGerbong;
@@ -64,7 +65,7 @@ public class Gerbong {
         this.kapasitasGerbong = kapasitasGerbong;
     }
     
-    public void isiGerbong(String idKursi, int noGerbong){
-        
+    public void isiGerbong(Kursi kur, String idKursi, int noGerbong){
+        kursiGerbong[noGerbong].isiKursi(kur, idKursi, "Terisi");
     }    
 }

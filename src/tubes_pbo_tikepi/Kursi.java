@@ -15,9 +15,6 @@ public class Kursi {
     private String kolomKursi;
     private String barisKursi;
     private String status;
-    /** Kayannya dibikin aja Kursi[] buat nampung atributnya,
-        Jadi ntar ngubah status terisi / ngga nya tinggal ubah di array kursi nya
-        */
 
     public Kursi(String idKursi, String idGerbong, String kolomKursi, String barisKursi) {
         this.idKursi = idKursi;
@@ -67,7 +64,7 @@ public class Kursi {
         this.barisKursi = barisKursi;
     }
     
-    public void isiKursi(String idKursi, String status){
-        
+    public void isiKursi(Kursi kur, String idKursi, String status){
+        kur.setStatus(status);
     }
 }
