@@ -33,11 +33,10 @@ public class Petugas extends Manusia {
     }
     
     public void verifikasi(Tiket tik, String idPenumpang){
-        String idTik = tik.getIdPenumpang();
-        if (idTik == idPenumpang){
-            System.out.println("Verified");
+        if (tik.getIdPenumpang() == idPenumpang){
+            System.out.println("Terverifikasi");
         }else{
-            System.out.println("ID Doesn't match, please try again");
+            System.out.println("ID Tidak sesuai, harap cek kembali");
         }
     }
 }

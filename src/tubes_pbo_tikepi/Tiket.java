@@ -15,6 +15,7 @@ public class Tiket {
     private String idPenumpang;
     private String kodeJadwal;
     private String tglPesanan;
+    private String tglBerangkat;
     private String idKursi;
     private String idKereta;
     private String harga;
@@ -29,6 +30,14 @@ public class Tiket {
         this.harga = harga;
     }
 
+    public String getKodeTiket() {
+        return kodeTiket;
+    }
+
+    public void setKodeTiket(String kodeTiket) {
+        this.kodeTiket = kodeTiket;
+    }
+    
     public String getHarga() {
         return harga;
     }
@@ -84,6 +93,13 @@ public class Tiket {
     public void setIdKereta(String idKereta) {
         this.idKereta = idKereta;
     }
-    
+
+    public String getTglBerangkat() {
+        return tglBerangkat;
+    }
+
+    public void setTglBerangkat(String tglBerangkat) {
+        this.tglBerangkat = tglBerangkat;
+    }
     
 }

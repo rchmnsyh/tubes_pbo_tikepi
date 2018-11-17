@@ -8,7 +8,8 @@ package tubes_pbo_tikepi;
 public class Penumpang extends Manusia {
     private String idPenumpang;
     private String email;
-    private Tiket[] Tiket;
+    private Tiket[] detailTiket;
+    private int jumTiket;
     
     public Penumpang(String idPenumpang, String nama, String jenisKelamin, String tglLahir,
             String noHp, String alamat){
@@ -42,12 +43,31 @@ public class Penumpang extends Manusia {
         this.email = email;
     }
     
-    public void pesanKereta(Tiket tik){
-        
+    public void pesanKereta(String kodeTiket, String idPenumpang, String kodeJadwal, String tglPesanan, String idKursi, String idKereta, String harga){
+        if (jumTiket > 0){
+            System.out.println("Sorry, 1 ticket for one person only");
+        } else {
+            detailTiket[jumTiket++] = new Tiket(kodeTiket, idPenumpang, kodeJadwal, tglPesanan, idKursi, idKereta, harga);
+        }
     }
     
-    public Tiket infoTiket(){
-        return null;
-        
+    public void infoTiket(Tiket tik){
+        System.out.println("Kode tiket   : " + tik.getKodeTiket());
+        System.out.println("ID Penumpang : " + tik.getIdPenumpang());
+        System.out.println("Kode jadwal  : " + tik.getKodeJadwal());
+        System.out.println("Kode kereta         : " + tik.getIdKereta());
+        System.out.println("");
+        System.out.println("Tanggal pesan tiket : " + tik.getTglPesanan());
+        System.out.println("Nomor kursi         : " + tik.getIdKursi());
+        System.out.println("Harga tiket         : " + tik.getHarga());
     }
+
+    public int getJumTiket() {
+        return jumTiket;
+    }
+
+    public void setJumTiket(int jumTiket) {
+        this.jumTiket = jumTiket;
+    }
+    
 }
