@@ -10,10 +10,7 @@ public class Penumpang extends Manusia {
     private String email;
     private Tiket[] detailTiket;
     private int jumTiket;
-    /** Kenapa tiket dibikin array soalnya 1 orang max 1 tiket
-     *  biar gampang buat verifikasinya, tinggal sesuaiin nama di tiket sama nama penump
-     */
-    
+
     public Penumpang(String idPenumpang, String nama, String jenisKelamin, String tglLahir,
             String noHp, String alamat, String email){
         this.idPenumpang = idPenumpang;
