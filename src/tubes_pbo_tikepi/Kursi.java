@@ -15,13 +15,16 @@ public class Kursi {
     private String kolomKursi;
     private String barisKursi;
     private String status;
+    /** Kayannya dibikin aja Kursi[] buat nampung atributnya,
+        Jadi ntar ngubah status terisi / ngga nya tinggal ubah di array kursi nya
+        */
 
-    public Kursi(String idKursi, String idGerbong, String kolomKursi, String barisKursi, String status) {
+    public Kursi(String idKursi, String idGerbong, String kolomKursi, String barisKursi) {
         this.idKursi = idKursi;
         this.idGerbong = idGerbong;
         this.kolomKursi = kolomKursi;
         this.barisKursi = barisKursi;
-        this.status = status;
+        this.status = "Kosong";
     }
 
     public String getStatus() {
@@ -62,5 +65,9 @@ public class Kursi {
 
     public void setBarisKursi(String barisKursi) {
         this.barisKursi = barisKursi;
+    }
+    
+    public void isiKursi(String idKursi, String status){
+        
     }
 }
