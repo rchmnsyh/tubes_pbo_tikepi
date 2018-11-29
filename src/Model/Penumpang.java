@@ -1,4 +1,4 @@
-package tubes_pbo_tikepi;
+package Model;
 
 /**
  *

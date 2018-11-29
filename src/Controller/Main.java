@@ -3,7 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tubes_pbo_tikepi;
+package Controller;
+import View.MenuPenumpangJFrame;
 import java.util.*;
 
 /**
@@ -16,7 +17,8 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        MenuPenumpangJFrame x = new MenuPenumpangJFrame();
+        x.setVisible(true);
     }
     
 }
