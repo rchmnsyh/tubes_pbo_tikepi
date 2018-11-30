@@ -72,6 +72,7 @@ public class PilihKursiJFrame extends javax.swing.JFrame {
         kolom = new javax.swing.JComboBox<>();
         baris = new javax.swing.JComboBox<>();
         btnCek = new javax.swing.JButton();
+        btnRefresh = new javax.swing.JButton();
         btnPesan = new javax.swing.JButton();
         rbL = new javax.swing.JRadioButton();
         rbP = new javax.swing.JRadioButton();
@@ -155,7 +156,7 @@ public class PilihKursiJFrame extends javax.swing.JFrame {
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 470, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         jLabel10.setBackground(new java.awt.Color(96, 187, 34));
@@ -192,7 +193,7 @@ public class PilihKursiJFrame extends javax.swing.JFrame {
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(37, 37, 37)
                 .addComponent(jLabel15)
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -205,19 +206,20 @@ public class PilihKursiJFrame extends javax.swing.JFrame {
         jLabel14.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel14.setText("Gerbong");
 
-        gerbong.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
-
         jLabel16.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel16.setText("Kolom");
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel17.setText("Baris");
 
+        kolom.setEnabled(false);
         kolom.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 kolomActionPerformed(evt);
             }
         });
+
+        baris.setEnabled(false);
 
         btnCek.setText("Cek");
         btnCek.addActionListener(new java.awt.event.ActionListener() {
@@ -226,6 +228,8 @@ public class PilihKursiJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnRefresh.setText("Refresh");
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
@@ -233,16 +237,25 @@ public class PilihKursiJFrame extends javax.swing.JFrame {
             .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel14)
-                    .addComponent(jLabel16)
-                    .addComponent(jLabel17)
-                    .addComponent(kolom, 0, 84, Short.MAX_VALUE)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(gerbong, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(baris, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addComponent(btnCek)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnCek, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel14)
+                                    .addComponent(jLabel16))
+                                .addGap(27, 27, 27)
+                                .addComponent(jLabel17)
+                                .addGap(47, 47, 47))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                                .addComponent(kolom, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(baris, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(btnRefresh, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -251,18 +264,20 @@ public class PilihKursiJFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel14)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(gerbong, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(11, 11, 11)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(gerbong, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCek))
-                .addGap(9, 9, 9)
-                .addComponent(jLabel16)
+                    .addComponent(jLabel16)
+                    .addComponent(jLabel17))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(kolom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel17)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(baris, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(109, 109, 109))
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(kolom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(baris, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(btnRefresh)
+                .addGap(3, 3, 3)
+                .addComponent(btnCek)
+                .addGap(98, 98, 98))
         );
 
         btnPesan.setText("Pesan");
@@ -275,6 +290,7 @@ public class PilihKursiJFrame extends javax.swing.JFrame {
         rbL.setBackground(new java.awt.Color(55, 65, 74));
         buttonGroup1.add(rbL);
         rbL.setForeground(new java.awt.Color(59, 107, 156));
+        rbL.setSelected(true);
         rbL.setText("Laki-laki");
 
         rbP.setBackground(new java.awt.Color(55, 65, 74));
@@ -381,7 +397,7 @@ public class PilihKursiJFrame extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -424,8 +440,8 @@ public class PilihKursiJFrame extends javax.swing.JFrame {
                         .addComponent(jLabel9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(29, Short.MAX_VALUE))
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 529, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -436,7 +452,9 @@ public class PilihKursiJFrame extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -478,6 +496,7 @@ public class PilihKursiJFrame extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> baris;
     private javax.swing.JButton btnCek;
     private javax.swing.JButton btnPesan;
+    private javax.swing.JButton btnRefresh;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JTextField email;
     private javax.swing.JComboBox<String> gerbong;
@@ -517,6 +536,9 @@ public class PilihKursiJFrame extends javax.swing.JFrame {
     public void addActionListener(ActionListener x){
         btnCek.addActionListener(x);
         btnPesan.addActionListener(x);
+        btnRefresh.addActionListener(x);
+        kolom.addActionListener(x);
+        baris.addActionListener(x);
     }
 
     public void setBaris(String baris) {
@@ -535,10 +557,22 @@ public class PilihKursiJFrame extends javax.swing.JFrame {
         return alamat.getText();
     }
 
-    public String getBaris() {
+    public String getBarisValue() {
         return baris.getSelectedItem().toString();
     }
+    
+    public String getKolomValue() {
+        return kolom.getSelectedItem().toString();
+    }
 
+    public JComboBox getBaris(){
+        return baris;
+    }
+    
+    public JComboBox getKolom(){
+        return kolom;
+    }
+    
     public JButton getBtnCek() {
         return btnCek;
     }
@@ -554,13 +588,33 @@ public class PilihKursiJFrame extends javax.swing.JFrame {
     public String getGerbong() {
         return gerbong.getSelectedItem().toString();
     }
+    
+    public int getKolomCount(){
+        return kolom.getItemCount();
+    }
+    
+    public int getBarisCount(){
+        return baris.getItemCount();
+    }
+    
+    public String getKolomValue(int i){
+        return kolom.getItemAt(i).toString();
+    }
+    
+    public String getBarisValue(int i){
+        return baris.getItemAt(i).toString();
+    }
+    
+    public void setKolomEnable(boolean status){
+        kolom.setEnabled(status);
+    }
+    
+    public void setBarisEnable(boolean status){
+        baris.setEnabled(status);
+    }
 
     public String getJenisID() {
         return jenisID.getSelectedItem().toString();
-    }
-
-    public String getKolom() {
-        return kolom.getSelectedItem().toString();
     }
 
     public String getNamaPenumpang() {
@@ -582,8 +636,25 @@ public class PilihKursiJFrame extends javax.swing.JFrame {
     public JRadioButton getRbP() {
         return rbP;
     }
+    
+    public String getJK(){
+        if(rbP.isSelected()){
+            return "P";
+        }
+        else{
+            return "L";
+        }
+    }
 
     public String getTglLahir() {
         return tglLahirString;
+    }
+    
+    public JButton getBtnRefresh(){
+        return btnRefresh;
+    }
+    
+    public int getIndexGerbong(){
+        return gerbong.getSelectedIndex();
     }
 }

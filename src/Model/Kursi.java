@@ -16,12 +16,12 @@ public class Kursi {
     private String barisKursi;
     private String status;
 
-    public Kursi(String idKursi, String idGerbong, String kolomKursi, String barisKursi) {
+    public Kursi(String idKursi, String idGerbong, String kolomKursi, String barisKursi, String status) {
         this.idKursi = idKursi;
         this.idGerbong = idGerbong;
         this.kolomKursi = kolomKursi;
         this.barisKursi = barisKursi;
-        this.status = "Kosong";
+        this.status = status;
     }
 
     public String getStatus() {

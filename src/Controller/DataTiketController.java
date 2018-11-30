@@ -16,6 +16,7 @@ import java.awt.event.MouseAdapter;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -25,6 +26,7 @@ import javax.swing.table.DefaultTableModel;
 public class DataTiketController extends MouseAdapter implements ActionListener{
     private DataTiketJFrame view;
     private Database db;
+    public static Tiket baru;
 
     public DataTiketController() {
         view = new DataTiketJFrame();
@@ -37,7 +39,7 @@ public class DataTiketController extends MouseAdapter implements ActionListener{
     }   
     
     public void loadTable(){
-        DefaultTableModel model = new DefaultTableModel(new String[]{"Kode Jadwal", "Nama Kereta", "Tanggal Berangkat", "Jam Berangkat", "Jam Tiba"}, 0)
+        DefaultTableModel model = new DefaultTableModel(new String[]{"Kode Jadwal", "Nama Kereta", "Kelas Kereta", "Tanggal Berangkat", "Jam Berangkat", "Jam Tiba"}, 0)
         {
             @Override
             public boolean isCellEditable(int row, int column) {
@@ -46,7 +48,7 @@ public class DataTiketController extends MouseAdapter implements ActionListener{
         };
         ArrayList<Jadwal> jadwal = db.getJadwal();
         for( Jadwal j : jadwal){
-            model.addRow(new Object[]{j.getKodeJadwal(), db.GetNamaKereta(j.getIdKereta()), j.getTglBerangkat(), j.getJamBerangkat(), j.getJamTiba()});
+            model.addRow(new Object[]{j.getKodeJadwal(), db.GetNamaKereta(j.getIdKereta()), db.GetKelasKereta(j.getIdKereta()), j.getTglBerangkat(), j.getJamBerangkat(), j.getJamTiba()});
         }
         view.setTbJadwal(model);
     }
@@ -85,12 +87,17 @@ public class DataTiketController extends MouseAdapter implements ActionListener{
         }
         else if(source.equals(view.getBtnLanjut())){
             String kodeJadwal = view.getKodeJadwal();
-            String tanggal = new SimpleDateFormat("yyyy-MM-dd").format(Calendar.getInstance().getTime());
-            String idKereta = db.GetIDKeretaFromKodeJadwal(view.getKodeJadwal());
-            int harga = db.GetHarga(db.GetIDKeretaFromKodeJadwal(view.getKodeJadwal()));
-            Tiket baru = new Tiket(null, null, kodeJadwal, tanggal, null, idKereta, Integer.toString(harga));
-            new PilihKursiController();
-            view.setVisible(false);
+            if(kodeJadwal.isEmpty()){
+                JOptionPane.showMessageDialog(view, "Pilih jadwal terlebih dahulu.");
+            }
+            else{
+                String tanggal = new SimpleDateFormat("yyyy-MM-dd").format(Calendar.getInstance().getTime());
+                String idKereta = db.GetIDKeretaFromKodeJadwal(view.getKodeJadwal());
+                int harga = db.GetHarga(db.GetIDKeretaFromKodeJadwal(view.getKodeJadwal()));
+                baru = new Tiket(null, null, kodeJadwal, tanggal, null, idKereta, Integer.toString(harga));
+                new PilihKursiController();
+                view.setVisible(false);
+            }
         }
     }
 }

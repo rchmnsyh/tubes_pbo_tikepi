@@ -10,15 +10,19 @@ package Model;
  * @author R Λ C H
  */
 public class Tiket {
+
+    static void add(Tiket t) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     private String kodeTiket;
     private String idPetugas;
     private String idPenumpang;
     private String kodeJadwal;
     private String tglPesanan;
-    private String tglBerangkat;
     private String idKursi;
     private String idKereta;
     private String harga;
+    public static int serialKodeTiket = 0;
 
     public Tiket(String kodeTiket, String idPenumpang, String kodeJadwal, String tglPesanan, String idKursi, String idKereta, String harga) {
         this.kodeTiket = kodeTiket;
@@ -93,13 +97,4 @@ public class Tiket {
     public void setIdKereta(String idKereta) {
         this.idKereta = idKereta;
     }
-
-    public String getTglBerangkat() {
-        return tglBerangkat;
-    }
-
-    public void setTglBerangkat(String tglBerangkat) {
-        this.tglBerangkat = tglBerangkat;
-    }
-    
 }

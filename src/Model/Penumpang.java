@@ -7,13 +7,14 @@ package Model;
 
 public class Penumpang extends Manusia {
     private String idPenumpang;
+    private String jenisID;
     private String email;
-    private Tiket[] detailTiket;
     private int jumTiket;
 
-    public Penumpang(String idPenumpang, String nama, String jenisKelamin, String tglLahir,
-            String noHp, String alamat, String email){
+    public Penumpang(String idPenumpang, String jenisID, String nama, String jenisKelamin, String tglLahir,
+            String noHp, String email, String alamat){
         this.idPenumpang = idPenumpang;
+        this.jenisID = jenisID;
         this.nama = nama;
         this.jenisKelamin = jenisKelamin;
         this.tanggalLahir = tglLahir;
@@ -37,31 +38,20 @@ public class Penumpang extends Manusia {
         this.idPenumpang = idPenumpang;
     }
 
+    public String getJenisID() {
+        return jenisID;
+    }
+
+    public void setJenisID(String tipeID) {
+        this.jenisID = tipeID;
+    }
+
     public String getEmail() {
         return email;
     }
 
     public void setEmail(String email) {
         this.email = email;
-    }
-    
-    public void pesanKereta(String kodeTiket, String idPenumpang, String kodeJadwal, String tglPesanan, String idKursi, String idKereta, String harga){
-        if (jumTiket > 0){
-            System.out.println("Sorry, 1 ticket for one person only");
-        } else {
-            detailTiket[jumTiket++] = new Tiket(kodeTiket, idPenumpang, kodeJadwal, tglPesanan, idKursi, idKereta, harga);
-        }
-    }
-    
-    public void infoTiket(Tiket tik){
-        System.out.println("Kode tiket   : " + tik.getKodeTiket());
-        System.out.println("ID Penumpang : " + tik.getIdPenumpang());
-        System.out.println("Kode jadwal  : " + tik.getKodeJadwal());
-        System.out.println("Kode kereta         : " + tik.getIdKereta());
-        System.out.println("");
-        System.out.println("Tanggal pesan tiket : " + tik.getTglPesanan());
-        System.out.println("Nomor kursi         : " + tik.getIdKursi());
-        System.out.println("Harga tiket         : " + tik.getHarga());
     }
 
     public int getJumTiket() {
@@ -71,5 +61,47 @@ public class Penumpang extends Manusia {
     public void setJumTiket(int jumTiket) {
         this.jumTiket = jumTiket;
     }
+
+    public String getNama() {
+        return nama;
+    }
+
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+
+    public String getJenisKelamin() {
+        return jenisKelamin;
+    }
+
+    public void setJenisKelamin(String jenisKelamin) {
+        this.jenisKelamin = jenisKelamin;
+    }
+
+    public String getTanggalLahir() {
+        return tanggalLahir;
+    }
+
+    public void setTanggalLahir(String tanggalLahir) {
+        this.tanggalLahir = tanggalLahir;
+    }
+
+    public String getNoHp() {
+        return noHp;
+    }
+
+    public void setNoHp(String noHp) {
+        this.noHp = noHp;
+    }
+
+    public String getAlamat() {
+        return alamat;
+    }
+
+    public void setAlamat(String alamat) {
+        this.alamat = alamat;
+    }
+
+    
     
 }

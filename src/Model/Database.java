@@ -124,10 +124,10 @@ public class Database {
             rs = stmt.executeQuery(query);
             while (rs.next()){
                 stasiun.add(new Stasiun(rs.getString("kode_stasiun"), 
-                                       rs.getString("nama_stasiun"),
-                                       rs.getString("alamat_stasiun"), 
-                                       rs.getString("kelas_stasiun"), 
-                                       rs.getString("daerah_operasi")));
+                                        rs.getString("nama_stasiun"),
+                                        rs.getString("alamat_stasiun"), 
+                                        rs.getString("kelas_stasiun"), 
+                                        rs.getString("daerah_operasi")));
             }
         } catch (SQLException ex) {
             Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
@@ -135,10 +135,14 @@ public class Database {
         disconnect();
     }
     
-    public void loadGerbong() {
+    public ArrayList<Stasiun> getStasiun() {
+        return stasiun;
+    }
+    
+    public void loadGerbong(String idKereta) {
         connect();
         try {
-            String query = "SELECT * FROM gerbong";
+            String query = "SELECT * FROM gerbong WHERE id_kereta = '" + idKereta + "'";
             rs = stmt.executeQuery(query);
             while (rs.next()){
                 gerbong.add(new Gerbong(rs.getString("id_gerbong"), 
@@ -157,8 +161,26 @@ public class Database {
         return gerbong;
     }
     
-    public ArrayList<Stasiun> getStasiun() {
-        return stasiun;
+    public void loadBarisKolom(String idGerbong) {
+        connect();
+        try {
+            String query = "SELECT * FROM kursi WHERE id_gerbong = '" + idGerbong + "'";
+            rs = stmt.executeQuery(query);
+            while (rs.next()){
+                kursi.add(new Kursi(rs.getString("id_kursi"), 
+                                    rs.getString("id_gerbong"),
+                                    rs.getString("kolom_kursi"), 
+                                    rs.getString("baris_kursi"),
+                                    rs.getString("status")));
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        disconnect();
+    }
+    
+    public ArrayList<Kursi> getBarisKolom() {
+        return kursi;
     }
     
     public String GetNamaKereta(String idKereta){
@@ -168,6 +190,21 @@ public class Database {
             rs = stmt.executeQuery(query);
             if(rs.next()){
                 return rs.getString("nama_kereta");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        disconnect();
+        return null;
+    }
+    
+    public String GetKelasKereta(String idKereta){
+        connect();
+        try {
+            String query = "SELECT kelas FROM kereta WHERE id_kereta = '" + idKereta + "'";
+            rs = stmt.executeQuery(query);
+            if(rs.next()){
+                return rs.getString("kelas");
             }
         } catch (SQLException ex) {
             Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
@@ -207,7 +244,6 @@ public class Database {
     }
     
     public int GetHarga(String idKereta){
-       int harga;
        connect();
         try {
             String query = "SELECT kelas FROM kereta WHERE id_kereta = '" + idKereta + "'";
@@ -230,5 +266,64 @@ public class Database {
         return 0;
     }
     
+    public String GetIDKursi(String idGerbong, int kolomKursi, int barisKursi){
+       int harga;
+       connect();
+        try {
+            String query = "SELECT * FROM kursi WHERE id_gerbong = '" + idGerbong + "'"
+                                                   + " AND kolom_kursi = '" + kolomKursi + "'"
+                                                   + " AND baris_kursi = '" + barisKursi + "'";
+            rs = stmt.executeQuery(query);
+            if(rs.next()) return rs.getString("id_kursi");
+        } catch (SQLException ex) {
+            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        disconnect();
+        return null;
+    }
     
+    public String cekStatusKursi(String idGerbong, int kolomKursi, int barisKursi){
+       connect();
+        try {
+            String query = "SELECT * FROM kursi WHERE id_gerbong = '" + idGerbong + "'"
+                                                   + " AND kolom_kursi = '" + kolomKursi + "'"
+                                                   + " AND baris_kursi = '" + barisKursi + "'";
+            rs = stmt.executeQuery(query);
+            if(rs.next()) return rs.getString("status");
+        } catch (SQLException ex) {
+            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        disconnect();
+        return null; 
+    }
+    
+    public void addTiket(Tiket t) {
+        connect();
+        String query = "INSERT INTO tiket VALUES (";
+        query += "'" + t.getKodeTiket() + "',";
+        query += "'" + t.getIdPenumpang() + "',";
+        query += "'PTGS0000',";
+        query += "'" + t.getKodeJadwal() + "',";
+        query += "'" + t.getIdKursi() + "',";
+        query += "'" + t.getIdKereta() + "',";
+        query += "'" + t.getTglPesanan() + "',";
+        query += "'" + t.getHarga()+ "'";
+        query += ")";
+        if (manipulate(query)) disconnect();
+    }
+    
+    public void addPenumpang(Penumpang p) {
+        connect();
+        String query = "INSERT INTO penumpang VALUES (";
+        query += "'" + p.getIdPenumpang() + "',";
+        query += "'" + p.getJenisID() + "',";
+        query += "'" + p.getNama() + "',";
+        query += "'" + p.getJenisKelamin() + "',";
+        query += "'" + p.getTanggalLahir() + "',";
+        query += "'" + p.getNoHp() + "',";
+        query += "'" + p.getEmail() + "',";
+        query += "'" + p.getAlamat() + "'";
+        query += ")";
+        if (manipulate(query)) disconnect();
+    }
 }
