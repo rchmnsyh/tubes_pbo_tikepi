@@ -187,6 +187,4 @@ public class MenuPenumpangJFrame extends javax.swing.JFrame {
     public JButton getPesanTiket() {
         return pesanTiket;
     }
-    
-    
 }

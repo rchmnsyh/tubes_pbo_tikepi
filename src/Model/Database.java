@@ -19,10 +19,6 @@ import java.util.logging.Logger;
  * @author R Λ C H
  */
 public class Database {
-
-    public static Object getNamaKereta(String idKereta) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     private Connection conn = null;
     private Statement stmt = null;
     private ResultSet rs = null;
@@ -209,4 +205,6 @@ public class Database {
         disconnect();
         return 0;
     }
+    
+    
 }
