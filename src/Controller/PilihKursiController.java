@@ -6,7 +6,9 @@
 package Controller;
 
 import Model.Database;
+import View.DataTiketJFrame;
 import View.MenuPenumpangJFrame;
+import View.PilihKursiJFrame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
@@ -15,27 +17,21 @@ import java.awt.event.MouseAdapter;
  *
  * @author R Λ C H
  */
-public class MenuPenumpangController extends MouseAdapter implements ActionListener{
+public class PilihKursiController extends MouseAdapter implements ActionListener{
     
-    private MenuPenumpangJFrame view;
+    private PilihKursiJFrame view;
     private Database db;
     
-    public MenuPenumpangController(){
-        view = new MenuPenumpangJFrame();
+    public PilihKursiController(){
+        view = new PilihKursiJFrame();
         db = new Database();
-        view.addActionListener(this);
+        //view.addActionListener(this);
+        //view.addMouseAdapter(this);
         view.setVisible(true);
     }
-
+    
     @Override
     public void actionPerformed(ActionEvent e) {
-        Object source = e.getSource();
-        if (source.equals(view.getPesanTiket())){
-            new DataTiketController();
-            view.setVisible(false);
-        }
-        else if(source.equals(view.getCekTiket())){
-            //
-        }
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

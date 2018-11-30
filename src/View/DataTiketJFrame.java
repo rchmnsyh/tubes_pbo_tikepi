@@ -9,6 +9,8 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
+import java.text.SimpleDateFormat;
+import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -16,8 +18,9 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author ahmad
  */
-public class DataTiketJFrame extends javax.swing.JFrame {
 
+public class DataTiketJFrame extends javax.swing.JFrame {
+    String tglBerangkatString;
     /**
      * Creates new form DataTiketJFrame
      */
@@ -60,7 +63,7 @@ public class DataTiketJFrame extends javax.swing.JFrame {
         stasiunAsal = new javax.swing.JComboBox<>();
         stasiunTujuan = new javax.swing.JComboBox<>();
         jLabel10 = new javax.swing.JLabel();
-        kodePesanan = new javax.swing.JFormattedTextField();
+        kodeJadwal = new javax.swing.JFormattedTextField();
         tglBerangkat = new com.toedter.calendar.JDateChooser();
         btnCari = new javax.swing.JButton();
         btnLanjut = new javax.swing.JButton();
@@ -145,6 +148,11 @@ public class DataTiketJFrame extends javax.swing.JFrame {
 
             }
         ));
+        tbJadwal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tbJadwalMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(tbJadwal);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -165,9 +173,15 @@ public class DataTiketJFrame extends javax.swing.JFrame {
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(59, 107, 156));
-        jLabel10.setText("Kode Pesanan");
+        jLabel10.setText("Kode Jadwal");
 
-        kodePesanan.setEditable(false);
+        kodeJadwal.setEditable(false);
+
+        tglBerangkat.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                tglBerangkatPropertyChange(evt);
+            }
+        });
 
         btnCari.setText("Cari");
 
@@ -186,7 +200,7 @@ public class DataTiketJFrame extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel10)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(kodePesanan, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(kodeJadwal, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnLanjut, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
@@ -232,7 +246,7 @@ public class DataTiketJFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
-                    .addComponent(kodePesanan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(kodeJadwal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnLanjut))
                 .addGap(13, 13, 13))
         );
@@ -250,6 +264,19 @@ public class DataTiketJFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void tglBerangkatPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_tglBerangkatPropertyChange
+        if(tglBerangkat.getDate() != null){
+            SimpleDateFormat s = new SimpleDateFormat("yyyy-MM-dd");
+            tglBerangkatString = s.format(tglBerangkat.getDate());
+        }
+    }//GEN-LAST:event_tglBerangkatPropertyChange
+
+    private void tbJadwalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbJadwalMouseClicked
+        int row = tbJadwal.getSelectedRow();
+        String value = tbJadwal.getModel().getValueAt(row, 0).toString();
+        kodeJadwal.setText(value);
+    }//GEN-LAST:event_tbJadwalMouseClicked
 
     /**
      * @param args the command line arguments
@@ -272,7 +299,7 @@ public class DataTiketJFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JFormattedTextField kodePesanan;
+    private javax.swing.JFormattedTextField kodeJadwal;
     private javax.swing.JComboBox<String> stasiunAsal;
     private javax.swing.JComboBox<String> stasiunTujuan;
     private javax.swing.JTable tbJadwal;
@@ -303,15 +330,15 @@ public class DataTiketJFrame extends javax.swing.JFrame {
     }
 
     public String getTglBerangkat() {
-        return tglBerangkat.getDate().toString();
+        return tglBerangkatString;
     }
 
-    public String getKodePesanan() {
-        return kodePesanan.getText();
+    public String getKodeJadwal() {
+        return kodeJadwal.getText();
     }
 
-    public void setKodePesanan(String kodePesanan) {
-        this.kodePesanan.setText(kodePesanan);
+    public void setKodeJadwal(String kodeJadwal) {
+        this.kodeJadwal.setText(kodeJadwal);
     }
 
     public void setTbJadwal(DefaultTableModel tbJadwal) {
@@ -325,5 +352,12 @@ public class DataTiketJFrame extends javax.swing.JFrame {
     public void setStasiunTujuan(String stasiun){
         stasiunTujuan.addItem(stasiun);
     }
-    
+
+    public JButton getBtnCari() {
+        return btnCari;
+    }
+
+    public JButton getBtnLanjut() {
+        return btnLanjut;
+    }
 }

@@ -91,6 +91,34 @@ public class Database {
         return jadwal;
     }
     
+    public void loadJadwalSearch(String tglBerangkat, String stasiunAsal, String stasiunTujuan){
+        connect();
+        jadwal.clear();
+        try {
+            String query = "SELECT * FROM jadwal WHERE tgl_berangkat = '" + tglBerangkat + "' "
+                                              + "AND stasiun_asal = '" + stasiunAsal + "' "
+                                              + "AND stasiun_tujuan = '" + stasiunTujuan + "'";
+            
+            rs = stmt.executeQuery(query);
+            while (rs.next()){
+                jadwal.add(new Jadwal(rs.getString("kode_jadwal"), 
+                                      rs.getString("id_kereta"),
+                                      rs.getString("stasiun_asal"), 
+                                      rs.getString("stasiun_tujuan"), 
+                                      rs.getString("tgl_berangkat"),
+                                      rs.getString("jam_berangkat"), 
+                                      rs.getString("jam_tiba")));
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        disconnect();
+    }
+    
+    public ArrayList<Jadwal> getJadwalSearch() {
+        return jadwal;
+    }
+    
     public void loadStasiun() {
         connect();
         try {
@@ -126,5 +154,59 @@ public class Database {
         }
         disconnect();
         return null;
+    }
+    
+    public String GetIDKeretaFromKodeJadwal(String kodeJadwal){
+        connect();
+        try {
+            String query = "SELECT id_kereta FROM jadwal WHERE kode_jadwal = '" + kodeJadwal + "'";
+            rs = stmt.executeQuery(query);
+            if(rs.next()){
+                return rs.getString("id_kereta");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        disconnect();
+        return null;
+    }
+    
+    public String GetKodeStasiun(String namaStasiun){
+        connect();
+        try {
+            String query = "SELECT kode_stasiun FROM stasiun WHERE nama_stasiun = '" + namaStasiun + "'";
+            rs = stmt.executeQuery(query);
+            if(rs.next()){
+                return rs.getString("kode_stasiun");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        disconnect();
+        return null;
+    }
+    
+    public int GetHarga(String idKereta){
+       int harga;
+       connect();
+        try {
+            String query = "SELECT kelas FROM kereta WHERE id_kereta = '" + idKereta + "'";
+            rs = stmt.executeQuery(query);
+            if(rs.next()){
+                if(rs.getString("kelas").equals("Eksekutif")){
+                    return 300000;
+                }
+                else if(rs.getString("kelas").equals("Bisnis")){
+                    return 180000;
+                }
+                else{
+                    return 100000;
+                }
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        disconnect();
+        return 0;
     }
 }

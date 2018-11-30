@@ -52,7 +52,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="kodePesanan" min="-2" pref="80" max="-2" attributes="0"/>
+                          <Component id="kodeJadwal" min="-2" pref="80" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="btnLanjut" min="-2" pref="80" max="-2" attributes="0"/>
                       </Group>
@@ -111,7 +111,7 @@
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="kodePesanan" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="kodeJadwal" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnLanjut" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
@@ -260,6 +260,9 @@
                   <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tbJadwalMouseClicked"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -335,15 +338,18 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="9c" green="6b" red="3b" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Kode Pesanan"/>
+            <Property name="text" type="java.lang.String" value="Kode Jadwal"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JFormattedTextField" name="kodePesanan">
+        <Component class="javax.swing.JFormattedTextField" name="kodeJadwal">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
           </Properties>
         </Component>
         <Component class="com.toedter.calendar.JDateChooser" name="tglBerangkat">
+          <Events>
+            <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="tglBerangkatPropertyChange"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnCari">
           <Properties>
