@@ -10,14 +10,14 @@ package Model;
  * @author ahmad
  */
 public class Stasiun {
-    private String idStasiun;
+    private String kodeStasiun;
     private String namaStasiun;
-    private String kelasStasiun;
     private String alamatStasiun;
+    private String kelasStasiun;
     private String daerahOperasi;
 
-    public void setIdStasiun(String idStasiun) {
-        this.idStasiun = idStasiun;
+    public void setKodeStasiun(String kodeStasiun) {
+        this.kodeStasiun = kodeStasiun;
     }
 
     public void setNamaStasiun(String namaStasiun) {
@@ -36,8 +36,8 @@ public class Stasiun {
         this.daerahOperasi = daerahOperasi;
     }
 
-    public String getIdStasiun() {
-        return idStasiun;
+    public String getKodeStasiun() {
+        return kodeStasiun;
     }
 
     public String getNamaStasiun() {
@@ -56,8 +56,8 @@ public class Stasiun {
         return daerahOperasi;
     }
 
-    public Stasiun(String idStasiun, String namaStasiun, String kelasStasiun, String alamatStasiun, String daerahOperasi) {
-        this.idStasiun = idStasiun;
+    public Stasiun(String kodeStasiun, String namaStasiun, String alamatStasiun, String kelasStasiun, String daerahOperasi) {
+        this.kodeStasiun = kodeStasiun;
         this.namaStasiun = namaStasiun;
         this.kelasStasiun = kelasStasiun;
         this.alamatStasiun = alamatStasiun;

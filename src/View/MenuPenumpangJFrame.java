@@ -7,6 +7,8 @@ package View;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
 
 /**
  *
@@ -151,15 +153,11 @@ public class MenuPenumpangJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void pesanTiketMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pesanTiketMouseClicked
-        DataTiketJFrame x = new DataTiketJFrame();
-        this.setVisible(false);
-        x.setVisible(true);
+
     }//GEN-LAST:event_pesanTiketMouseClicked
 
     private void cekTiketMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cekTiketMouseClicked
-        CekTiketJFrame x = new CekTiketJFrame();
-        this.setVisible(false);
-        x.setVisible(true);
+
     }//GEN-LAST:event_cekTiketMouseClicked
 
     /**
@@ -177,5 +175,18 @@ public class MenuPenumpangJFrame extends javax.swing.JFrame {
     private javax.swing.JButton pesanTiket;
     // End of variables declaration//GEN-END:variables
 
+    public void addActionListener(ActionListener x){
+        pesanTiket.addActionListener(x);
+        cekTiket.addActionListener(x);
+    }
+
+    public JButton getCekTiket() {
+        return cekTiket;
+    }
+
+    public JButton getPesanTiket() {
+        return pesanTiket;
+    }
+    
     
 }

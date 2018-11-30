@@ -11,17 +11,21 @@ package Model;
  */
 public class Jadwal {
     private String kodeJadwal;
+    private String idKereta;
     private String jamBerangkat;
     private String jamTiba;
     private String stasiunAsal;
     private String stasiunTujuan;
+    private String tglBerangkat;
 
-    public Jadwal(String kodeJadwal, String jamBerangkat, String jamTiba, String stasiunAsal, String stasiunTujuan) {
+    public Jadwal(String kodeJadwal, String idKereta, String stasiunAsal, String stasiunTujuan, String tglBerangkat, String jamBerangkat, String jamTiba) {
         this.kodeJadwal = kodeJadwal;
+        this.idKereta = idKereta;
         this.jamBerangkat = jamBerangkat;
         this.jamTiba = jamTiba;
         this.stasiunAsal = stasiunAsal;
         this.stasiunTujuan = stasiunTujuan;
+        this.tglBerangkat = tglBerangkat;
     }
 
     public String getStasiunTujuan() {
@@ -62,6 +66,22 @@ public class Jadwal {
 
     public void setStasiunAsal(String stasiunAsal) {
         this.stasiunAsal = stasiunAsal;
+    }
+
+    public String getTglBerangkat() {
+        return tglBerangkat;
+    }
+
+    public void setTglBerangkat(String tglBerangkat) {
+        this.tglBerangkat = tglBerangkat;
+    }
+
+    public String getIdKereta() {
+        return idKereta;
+    }
+
+    public void setIdKereta(String idKereta) {
+        this.idKereta = idKereta;
     }
     
     
