@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 30, 2018 at 10:44 AM
+-- Generation Time: Nov 30, 2018 at 03:08 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 5.6.34
 
@@ -105,7 +105,33 @@ CREATE TABLE `jadwal` (
 INSERT INTO `jadwal` (`kode_jadwal`, `id_kereta`, `stasiun_asal`, `stasiun_tujuan`, `tgl_berangkat`, `jam_berangkat`, `jam_tiba`) VALUES
 ('JD001', 'KA001', 'BD', 'GMR', '2018-12-01', '18:30', '20:30'),
 ('JD002', 'KA002', 'SMT', 'SB', '2018-12-04', '02:30', '04:15'),
-('JD003', 'KA003', 'JAKK', 'SB', '2018-12-03', '02:30', '23:15');
+('JD003', 'KA003', 'JAKK', 'SB', '2018-12-03', '02:30', '23:15'),
+('JD004', 'KA004', 'GMR', 'SB', '2018-12-01', '08:00', '15:00'),
+('JD005', 'KA004', 'SB', 'GMR', '2018-12-04', '15:00', '22:00'),
+('JD006', 'KA005', 'GMR', 'SLO', '2018-12-01', '08:00', '16:35'),
+('JD007', 'KA006', 'SLO', 'GMR', '2018-12-01', '08:00', '16:35'),
+('JD008', 'KA007', 'GMR', 'CN', '2018-12-05', '09:00', '11:56'),
+('JD009', 'KA007', 'CN', 'GMR', '2018-12-05', '13:50', '16:49'),
+('JD010', 'KA007', 'GMR', 'CN', '2018-12-05', '17:20', '20:16'),
+('JD011', 'KA008', 'BD', 'SB', '2018-12-06', '08:00', '17:30'),
+('JD012', 'KA008', 'SB', 'BD', '2018-12-06', '17:30', '23:30'),
+('JD013', 'KA009', 'GMR', 'SMT', '2018-12-07', '06:00', '12:00'),
+('JD014', 'KA009', 'SMT', 'GMR', '2018-12-07', '16:15', '22:15'),
+('JD015', 'KA010', 'BD', 'SMT', '2018-12-05', '05:27', '14:00'),
+('JD016', 'KA010', 'SMT', 'BD', '2018-12-05', '14:20', '22;18'),
+('JD017', 'KA011', 'GMR', 'SB', '2018-12-10', '05:00', '18:00'),
+('JD018', 'KA012', 'BD', 'SLO', '2018-12-13', '07:10', '15:48'),
+('JD019', 'KA012', 'SLO', 'BD', '2018-12-13', '15:58', '23:55'),
+('JD020', 'KA013', 'BD', 'ML', '2018-12-10', '07:05', '22:25'),
+('JD021', 'KA014', 'PSE', 'YK', '2018-12-12', '06:15', '14:35'),
+('JD022', 'KA014', 'YK', 'PSE', '2018-12-12', '14:50', '22:47'),
+('JD023', 'KA015', 'PSE', 'CN', '2018-12-13', '05:45', '08:45'),
+('JD024', 'KA016', 'PSE', 'KTA', '2018-12-11', '08:15', '19:15'),
+('JD025', 'KA017', 'GMR', 'BD', '2018-12-16', '12:35', '16:00'),
+('JD026', 'KA018', 'CN', 'GMR', '2018-12-18', '05:50', '09:05'),
+('JD027', 'KA019', 'ML', 'PSE', '2018-12-13', '07:12', '22:47'),
+('JD028', 'KA020', 'SMT', 'PSE', '2018-12-18', '08:00', '14:30'),
+('JD029', 'KA020', 'PSE', 'SMT', '2018-12-18', '14:50', '22:39');
 
 -- --------------------------------------------------------
 
@@ -268,7 +294,8 @@ INSERT INTO `kursi` (`id_kursi`, `id_gerbong`, `kolom_kursi`, `baris_kursi`) VAL
 --
 
 CREATE TABLE `penumpang` (
-  `id_penumpang` char(5) NOT NULL,
+  `id_penumpang` char(20) NOT NULL,
+  `tipe_id` varchar(10) NOT NULL,
   `nama` varchar(40) DEFAULT NULL,
   `jenis_kelamin` char(1) DEFAULT NULL,
   `tgl_lahir` date DEFAULT NULL,
@@ -281,27 +308,27 @@ CREATE TABLE `penumpang` (
 -- Dumping data for table `penumpang`
 --
 
-INSERT INTO `penumpang` (`id_penumpang`, `nama`, `jenis_kelamin`, `tgl_lahir`, `no_hp`, `email`, `alamat`) VALUES
-('PA001', 'Indri Tocing Lamba', 'P', '1961-02-03', '(+62) 750-6088', 'Indri@gmail.com', 'Mangga Dua Square Lt.1 Blok C no. 148-149 Jakarta, Mangga Dua Square Lt.1 Blok C no. 148-149 Jakarta'),
-('PA002', 'Norce Basiang', 'P', '1972-01-02', '(+62) 511-5533', 'Norce@gwoil.com', 'Wonorejo Permai Timur I / 71, Jawa Timur'),
-('PA003', 'Irmayana Agung', 'L', '1995-11-05', '(+62) 551-1470', 'Irmayana@gjlil.com', 'Jl Jend Sudirman Kav 10-11 Midplaza 2 Lt 17,Karet Tengsin'),
-('PA004', 'Yanto Taruk Lembang', 'L', '1918-04-20', '(+62) 240-5927', 'Yanto@gjlil.com', 'Jl Puyuh Brt VI 9,Jurang Manggu Timur'),
-('PA005', 'Rayni Sipah', 'P', '1966-02-19', '(+62) 741-4594', 'Rayni@gjlil.com', 'Jl.D-4 No. 8 Kel. Kebon Baru Kec. Tebet Jakarta, Dki Jakarta'),
-('PA006', 'Lince Rambulangi', 'P', '1996-12-13', '(+62) 890-2689', 'Lince@gjail.com', 'JALAN JENDRAL SUDIRMAN KAV 11-12 NO. 08-09 SENAPELAN, RIAU 28884, INDONESIA'),
-('PA007', 'Rachman Singgi', 'L', '1952-02-13', '(+62) 384-5792', 'Rachman@gjlil.com', 'Jl. Wijaya VIII No. 2 Melawai - Kebayoran Baru, Jakarta Selatan'),
-('PA008', 'Bertus Bolle', 'L', '1976-10-02', '(+62) 406-7540', 'Bertus@g62il.com', '623/1 lt.3 Begum Rokeya Sarani'),
-('PA009', 'Irwanto Pulullung', 'P', '1988-11-11', '(+62) 868-6326', 'Irwanto@gjlil.com', 'Jl Jatiwangi Kompl Antilope Bl B-17/195-B,Jati Waringin'),
-('PA010', 'Novani Paliling', 'P', '1974-02-18', '(+62) 742-3322', 'Novani@ggril.com', 'Graha Motorent, Jl. KH. Abdullah Syafei No.3C-D Tebet Utara, Jakarta Selatan'),
-('PA011', 'Martius Rambulangi', 'L', '1952-07-12', '(+62) 811-2707', 'Martius@gjlil.com', 'JL Kebon Kacang 1 No. 2010240'),
-('PA012', 'Delfi Ayasari', 'P', '1972-05-21', '(+62) 576-6758', 'Delfi@gjlil.com', 'Jln Pendidikan 3, Dki Jakarta'),
-('PA013', 'Dean Palobo', 'P', '1984-04-12', '(+62) 820-4793', 'Dean@gjlil.com', 'Jl Daan Mogot Kompl Marina Sayang Bl A-17'),
-('PA014', 'Yusri Marni Nathan', 'P', '1992-06-22', '(+62) 318-6575', 'Yusri@gjlil.com', 'Jl Palmerah Utr 14 Central Mas Pacific Bldg Lt 4 Suite 404,Kemanggisan'),
-('PA015', 'Rizky Amba', 'L', '1990-02-11', '(+62) 348-1121', 'Rizky@gjlil.com', 'Jl Kendal 22,Menteng'),
-('PA016', 'Febrianti Asri', 'P', '1995-08-21', '(+62) 895-8461', 'Febrianti@gjlil.com', 'Jln.Kiaracondong.GG.Advent No.45 KIRCON BANDUNG, Jawa Barat'),
-('PA017', 'Melvin Palindang', 'L', '1983-12-13', '(+62) 524-3451', 'Melvin@gjlil.com', 'Jl Arteri Kelapa Dua II Bl B/40,Kebon Jeruk'),
-('PA018', 'Ansi Palalangan', 'P', '1975-11-12', '(+62) 367-8068', 'Ansi@gruil.com', 'Ruko Sunset Indah II, Blok A4JL Sunset Boulevard, Kuta'),
-('PA019', 'Rampean Tanja', 'L', '1980-02-13', '(+62) 218-3296', 'Rampean@gjlil.com', 'jl.Dr Muwardi no.7, Bali'),
-('PA020', 'Yohana Kalija', 'L', '1983-04-24', '(+62) 291-5441', 'Yohana@gjlil.com', 'Jl. Raya Berbek 46 Waru');
+INSERT INTO `penumpang` (`id_penumpang`, `tipe_id`, `nama`, `jenis_kelamin`, `tgl_lahir`, `no_hp`, `email`, `alamat`) VALUES
+('1234567890987654310', 'Paspor', 'Novani Paliling', 'P', '1974-02-18', '(+62) 742-3322', 'Novani@ggril.com', 'Graha Motorent, Jl. KH. Abdullah Syafei No.3C-D Tebet Utara, Jakarta Selatan'),
+('1234567890987654311', 'Paspor', 'Martius Rambulangi', 'L', '1952-07-12', '(+62) 811-2707', 'Martius@gjlil.com', 'JL Kebon Kacang 1 No. 2010240'),
+('1234567890987654320', 'KTP', 'Yusri Marni Nathan', 'P', '1992-06-22', '(+62) 318-6575', 'Yusri@gjlil.com', 'Jl Palmerah Utr 14 Central Mas Pacific Bldg Lt 4 Suite 404,Kemanggisan'),
+('1234567890987654321', 'KTP', 'Indri Tocing Lamba', 'P', '1961-02-03', '(+62) 750-6088', 'Indri@gmail.com', 'Mangga Dua Square Lt.1 Blok C no. 148-149 Jakarta, Mangga Dua Square Lt.1 Blok C no. 148-149 Jakarta'),
+('1234567890987654322', 'KTP', 'Norce Basiang', 'P', '1972-01-02', '(+62) 511-5533', 'Norce@gwoil.com', 'Wonorejo Permai Timur I / 71, Jawa Timur'),
+('1234567890987654323', 'KTP', 'Irmayana Agung', 'L', '1995-11-05', '(+62) 551-1470', 'Irmayana@gjlil.com', 'Jl Jend Sudirman Kav 10-11 Midplaza 2 Lt 17,Karet Tengsin'),
+('1234567890987654324', 'KTP', 'Yanto Taruk Lembang', 'L', '1918-04-20', '(+62) 240-5927', 'Yanto@gjlil.com', 'Jl Puyuh Brt VI 9,Jurang Manggu Timur'),
+('1234567890987654325', 'KTP', 'Rayni Sipah', 'P', '1966-02-19', '(+62) 741-4594', 'Rayni@gjlil.com', 'Jl.D-4 No. 8 Kel. Kebon Baru Kec. Tebet Jakarta, Dki Jakarta'),
+('1234567890987654326', 'SIM', 'Lince Rambulangi', 'P', '1996-12-13', '(+62) 890-2689', 'Lince@gjail.com', 'JALAN JENDRAL SUDIRMAN KAV 11-12 NO. 08-09 SENAPELAN, RIAU 28884, INDONESIA'),
+('1234567890987654327', 'SIM', 'Rachman Singgi', 'L', '1952-02-13', '(+62) 384-5792', 'Rachman@gjlil.com', 'Jl. Wijaya VIII No. 2 Melawai - Kebayoran Baru, Jakarta Selatan'),
+('1234567890987654328', 'SIM', 'Bertus Bolle', 'L', '1976-10-02', '(+62) 406-7540', 'Bertus@g62il.com', '623/1 lt.3 Begum Rokeya Sarani'),
+('1234567890987654329', 'SIM', 'Irwanto Pulullung', 'P', '1988-11-11', '(+62) 868-6326', 'Irwanto@gjlil.com', 'Jl Jatiwangi Kompl Antilope Bl B-17/195-B,Jati Waringin'),
+('1234567890987654331', 'Paspor', 'Delfi Ayasari', 'P', '1972-05-21', '(+62) 576-6758', 'Delfi@gjlil.com', 'Jln Pendidikan 3, Dki Jakarta'),
+('1234567890987654333', 'KTM', 'Febrianti Asri', 'P', '1995-08-21', '(+62) 895-8461', 'Febrianti@gjlil.com', 'Jln.Kiaracondong.GG.Advent No.45 KIRCON BANDUNG, Jawa Barat'),
+('1234567890987654342', 'SIM', 'Dean Palobo', 'P', '1984-04-12', '(+62) 820-4793', 'Dean@gjlil.com', 'Jl Daan Mogot Kompl Marina Sayang Bl A-17'),
+('1234567890987654376', 'Paspor', 'Ansi Palalangan', 'P', '1975-11-12', '(+62) 367-8068', 'Ansi@gruil.com', 'Ruko Sunset Indah II, Blok A4JL Sunset Boulevard, Kuta'),
+('1234567890987654377', 'SIM', 'Melvin Palindang', 'L', '1983-12-13', '(+62) 524-3451', 'Melvin@gjlil.com', 'Jl Arteri Kelapa Dua II Bl B/40,Kebon Jeruk'),
+('1234567890987654385', 'Paspor', 'Rampean Tanja', 'L', '1980-02-13', '(+62) 218-3296', 'Rampean@gjlil.com', 'jl.Dr Muwardi no.7, Bali'),
+('1234567890987654392', 'SIM', 'Yohana Kalija', 'L', '1983-04-24', '(+62) 291-5441', 'Yohana@gjlil.com', 'Jl. Raya Berbek 46 Waru'),
+('1234567890987654394', 'Paspor', 'Rizky Amba', 'L', '1990-02-11', '(+62) 348-1121', 'Rizky@gjlil.com', 'Jl Kendal 22,Menteng');
 
 -- --------------------------------------------------------
 
@@ -394,7 +421,7 @@ INSERT INTO `stasiun` (`kode_stasiun`, `nama_stasiun`, `alamat_stasiun`, `kelas_
 
 CREATE TABLE `tiket` (
   `kode_tiket` char(6) NOT NULL,
-  `id_penumpang` char(5) DEFAULT NULL,
+  `id_penumpang` char(20) DEFAULT NULL,
   `id_petugas` char(8) DEFAULT NULL,
   `kode_jadwal` char(5) DEFAULT NULL,
   `id_kursi` char(6) DEFAULT NULL,
@@ -459,11 +486,11 @@ ALTER TABLE `stasiun`
 --
 ALTER TABLE `tiket`
   ADD PRIMARY KEY (`kode_tiket`),
-  ADD KEY `tiket_fk1` (`id_penumpang`),
-  ADD KEY `tiket_fk2` (`id_petugas`),
-  ADD KEY `tiket_fk3` (`kode_jadwal`),
   ADD KEY `tiket_fk4` (`id_kursi`),
-  ADD KEY `tiket_fk5` (`id_kereta`);
+  ADD KEY `tiket_fk5` (`id_kereta`),
+  ADD KEY `tiket_fk2` (`id_petugas`) USING BTREE,
+  ADD KEY `tiket_fk1` (`id_penumpang`) USING BTREE,
+  ADD KEY `tiket_fk3` (`kode_jadwal`);
 
 --
 -- Constraints for dumped tables
@@ -493,9 +520,9 @@ ALTER TABLE `kursi`
 -- Constraints for table `tiket`
 --
 ALTER TABLE `tiket`
-  ADD CONSTRAINT `tiket_fk1` FOREIGN KEY (`id_penumpang`) REFERENCES `penumpang` (`id_penumpang`) ON DELETE CASCADE,
+  ADD CONSTRAINT `tiket_fk1` FOREIGN KEY (`id_penumpang`) REFERENCES `penumpang` (`id_penumpang`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `tiket_fk2` FOREIGN KEY (`id_petugas`) REFERENCES `petugas` (`id_petugas`) ON DELETE CASCADE,
-  ADD CONSTRAINT `tiket_fk3` FOREIGN KEY (`kode_jadwal`) REFERENCES `jadwal` (`kode_jadwal`) ON DELETE CASCADE,
+  ADD CONSTRAINT `tiket_fk3` FOREIGN KEY (`kode_jadwal`) REFERENCES `jadwal` (`kode_jadwal`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `tiket_fk4` FOREIGN KEY (`id_kursi`) REFERENCES `kursi` (`id_kursi`) ON DELETE CASCADE,
   ADD CONSTRAINT `tiket_fk5` FOREIGN KEY (`id_kereta`) REFERENCES `kereta` (`id_kereta`) ON DELETE CASCADE;
 COMMIT;
