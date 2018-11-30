@@ -25,6 +25,8 @@ public class Database {
     
     private ArrayList<Stasiun> stasiun = new ArrayList<>();
     private ArrayList<Jadwal> jadwal = new ArrayList<>();
+    private ArrayList<Gerbong> gerbong = new ArrayList<>();
+    private ArrayList<Kursi> kursi = new ArrayList<>();
     
     public Database(){
         loadJadwal();
@@ -131,6 +133,28 @@ public class Database {
             Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
         }
         disconnect();
+    }
+    
+    public void loadGerbong() {
+        connect();
+        try {
+            String query = "SELECT * FROM gerbong";
+            rs = stmt.executeQuery(query);
+            while (rs.next()){
+                gerbong.add(new Gerbong(rs.getString("id_gerbong"), 
+                                        rs.getString("id_kereta"),
+                                        Integer.parseInt(rs.getString("nomor_gerbong")), 
+                                        rs.getString("status"), 
+                                        Integer.parseInt(rs.getString("kapasitas"))));
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        disconnect();
+    }
+    
+    public ArrayList<Gerbong> getGerbong() {
+        return gerbong;
     }
     
     public ArrayList<Stasiun> getStasiun() {
