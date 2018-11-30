@@ -19,6 +19,10 @@ import java.util.logging.Logger;
  * @author R Λ C H
  */
 public class Database {
+
+    public static Object getNamaKereta(String idKereta) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     private Connection conn = null;
     private Statement stmt = null;
     private ResultSet rs = null;
@@ -107,5 +111,20 @@ public class Database {
     
     public ArrayList<Stasiun> getStasiun() {
         return stasiun;
+    }
+    
+    public String GetNamaKereta(String idKereta){
+        connect();
+        try {
+            String query = "SELECT nama_kereta FROM kereta WHERE id_kereta = '" + idKereta + "'";
+            rs = stmt.executeQuery(query);
+            if(rs.next()){
+                return rs.getString("nama_kereta");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        disconnect();
+        return null;
     }
 }

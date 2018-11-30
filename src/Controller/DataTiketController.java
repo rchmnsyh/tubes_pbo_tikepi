@@ -37,7 +37,7 @@ public class DataTiketController extends MouseAdapter implements ActionListener{
         DefaultTableModel model = new DefaultTableModel(new String[]{"Kode Jadwal", "Nama Kereta", "Jam Berangkat", "Jam Tiba"}, 0);
         ArrayList<Jadwal> jadwal = db.getJadwal();
         for( Jadwal j : jadwal){
-            model.addRow(new Object[]{j.getKodeJadwal(), j.getIdKereta(), j.getJamBerangkat(), j.getJamTiba()});
+            model.addRow(new Object[]{j.getKodeJadwal(), db.GetNamaKereta(j.getIdKereta()), j.getJamBerangkat(), j.getJamTiba()});
         }
         view.setTbJadwal(model);
     }
