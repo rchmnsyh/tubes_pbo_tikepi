@@ -188,7 +188,151 @@ public class AdminController extends MouseAdapter implements ActionListener{
             loadTableGerbong();
         }
         else if(source.equals(view.getGerbong_refresh())){
-            loadTableGerbong();
-       }
+            loadTableGerbong();   
+        } 
+        else if(source.equals(view.getJadwal_simpan())){
+            String kodeJadwal = view.getJadwal_kodeJadwal();
+            String idKereta = view.getJadwal_idKereta();
+            String stasiunAsal = view.getJadwal_stasiunAsal();
+            String stasiunTujuan = view.getJadwal_stasiunTujuan();
+            String tanggalBerangkat = view.getJadwal_tglBerangkat();
+            String jamBerangkat = view.getJadwal_jamBerangkat();
+            String jamTiba = view.getJadwal_jamTiba();
+            
+            db.addJadwal(new Jadwal(kodeJadwal, idKereta, stasiunAsal, stasiunTujuan, tanggalBerangkat, jamBerangkat, jamTiba));
+            JOptionPane.showMessageDialog(view, "Data jadwal sukses diinput.");
+            loadTableJadwal();
+        } 
+        else if(source.equals(view.getJadwal_hapus())){
+            String kodeJadwal = view.getJadwal_kodeJadwal();
+            db.deleteJadwal(new Jadwal(kodeJadwal, null, null, null, null, null, null));
+            JOptionPane.showMessageDialog(view, "Data jadwal " + kodeJadwal + " sukses dihapus.");
+            loadTableJadwal();
+        }
+        else if(source.equals(view.getJadwal_edit())){
+            String kodeJadwal = view.getJadwal_kodeJadwal();
+            String idKereta = view.getJadwal_idKereta();
+            String stasiunAsal = view.getJadwal_stasiunAsal();
+            String stasiunTujuan = view.getJadwal_stasiunTujuan();
+            String tanggalBerangkat = view.getJadwal_tglBerangkat();
+            String jamBerangkat = view.getJadwal_jamBerangkat();
+            String jamTiba = view.getJadwal_jamTiba();
+            
+            db.updateJadwal(new Jadwal(kodeJadwal, idKereta, stasiunAsal, stasiunTujuan, tanggalBerangkat, jamBerangkat, jamTiba));
+            JOptionPane.showMessageDialog(view, "Data jadwal " + kodeJadwal + " sukses diedit.");
+            loadTableJadwal();
+        }
+        else if(source.equals(view.getKereta_simpan())){
+            String idKereta = view.getKereta_idKereta();
+            String namaKereta = view.getKereta_namaKereta();
+            String kapasitas = view.getKereta_kapasitas();
+            String kelasKereta = view.getKelasKereta();
+            
+            db.addKereta(new Kereta(idKereta, namaKereta, kelasKereta, Integer.parseInt(kapasitas)));
+            JOptionPane.showMessageDialog(view, "Data Kereta sukses diinput.");
+            loadTableKereta();
+        } 
+        else if(source.equals(view.getKereta_hapus())){
+            String idKereta = view.getKereta_idKereta();
+            db.deleteKereta(new Kereta(idKereta, null, null, 0));
+            JOptionPane.showMessageDialog(view, "Data Kereta " + idKereta + " sukses dihapus.");
+            loadTableKereta();
+        }
+        else if(source.equals(view.getKereta_edit())){
+            String idKereta = view.getKereta_idKereta();
+            String namaKereta = view.getKereta_namaKereta();
+            String kapasitas = view.getKereta_kapasitas();
+            String kelasKereta = view.getKelasKereta();
+            
+            db.updateKereta(new Kereta(idKereta, namaKereta, kelasKereta, Integer.parseInt(kapasitas)));
+            JOptionPane.showMessageDialog(view, "Data Kereta " + idKereta + " sukses diedit.");
+            loadTableKereta();
+        }
+        else if(source.equals(view.getKursi_simpan())){
+            String idKursi = view.getKursi_idKursi();
+            String idGerbong = view.getKursi_idGerbong();
+            String kolomKursi = view.getKursi_kolomKursi();
+            String barisKursi = view.getKursi_barisKursi();
+            String statusKursi = view.getStatusKursi();
+            
+            db.addKursi(new Kursi(idKursi, idGerbong, kolomKursi, barisKursi, statusKursi));
+            JOptionPane.showMessageDialog(view, "Data Kursi sukses diinput.");
+            loadTableKursi();
+        } 
+        else if(source.equals(view.getKursi_hapus())){
+            String idKursi = view.getKursi_idKursi();
+            db.deleteKursi(new Kursi(idKursi, null, null, null, null));
+            JOptionPane.showMessageDialog(view, "Data Kursi " + idKursi + " sukses dihapus.");
+            loadTableKursi();
+        }
+        else if(source.equals(view.getKursi_edit())){
+            String idKursi = view.getKursi_idKursi();
+            String idGerbong = view.getKursi_idGerbong();
+            String kolomKursi = view.getKursi_kolomKursi();
+            String barisKursi = view.getKursi_barisKursi();
+            String statusKursi = view.getStatusKursi();
+            
+            db.updateKursi(new Kursi(idKursi, idGerbong, kolomKursi, barisKursi, statusKursi));
+            JOptionPane.showMessageDialog(view, "Data Kursi " + idKursi + " sukses diedit.");
+            loadTableKursi();
+        }
+         else if(source.equals(view.getPetugas_simpan())){
+            String idPetugas = view.getPetugas_idPetugas();
+            String nama = view.getPetugas_nama();
+            String jenisKelamin = view.getJKPetugas();
+            String tanggalLahir = view.getPetugas_tglLahir();
+            String noHp = view.getPetugas_noHP();
+            String email = view.getPetugas_email();
+            String alamat = view.getPetugas_alamat();
+            String password = view.getPetugas_password();
+            db.addPetugas(new Petugas(idPetugas, nama, jenisKelamin, tanggalLahir, noHp, email, alamat, password));
+            JOptionPane.showMessageDialog(view, "Data petugas sukses diinput.");
+            loadTablePetugas();
+        }
+        else if(source.equals(view.getPetugas_hapus())){
+            String idPetugas = view.getStasiun_kodeStasiun();
+            db.deletePetugas(new Petugas(idPetugas, null, null, null, null, null, null, null));
+            JOptionPane.showMessageDialog(view, "Data stasiun " + idPetugas + " sukses dihapus.");
+            loadTablePetugas();
+        }
+        else if(source.equals(view.getPetugas_edit())){
+            String idPetugas = view.getPetugas_idPetugas();
+            String nama = view.getPetugas_nama();
+            String jenisKelamin = view.getJKPetugas();
+            String tanggalLahir = view.getPetugas_tglLahir();
+            String noHp = view.getPetugas_noHP();
+            String email = view.getPetugas_email();
+            String alamat = view.getPetugas_alamat();
+            String password = view.getPetugas_password();
+            db.updatePetugas(new Petugas(idPetugas, nama, jenisKelamin, tanggalLahir, noHp, email, alamat, password));
+            JOptionPane.showMessageDialog(view, "Data gerbong " + idPetugas + " sukses diedit.");
+            loadTablePetugas();
+        }
+        else if(source.equals(view.getStasiun_simpan())){
+            String kodeStasiun = view.getStasiun_kodeStasiun();
+            String namaStasiun = view.getStasiun_namaStasiun();
+            String alamatStasiun = view.getStasiun_alamat();
+            String kelasStasiun = view.getKelasStasiun();
+            String daerahOperasi = view.getStasiun_daerahOperasi();
+            db.addStasiun(new Stasiun(kodeStasiun, namaStasiun, alamatStasiun, kelasStasiun, daerahOperasi));
+            JOptionPane.showMessageDialog(view, "Data stasiun sukses diinput.");
+            loadTableStasiun();
+        }
+        else if(source.equals(view.getStasiun_hapus())){
+            String kodeStasiun = view.getStasiun_kodeStasiun();
+            db.deleteStasiun(new Stasiun(kodeStasiun, null, null, null, null));
+            JOptionPane.showMessageDialog(view, "Data stasiun " + kodeStasiun + " sukses dihapus.");
+            loadTableStasiun();
+        }
+        else if(source.equals(view.getGerbong_edit())){
+            String kodeStasiun = view.getStasiun_kodeStasiun();
+            String namaStasiun = view.getStasiun_namaStasiun();
+            String alamatStasiun = view.getStasiun_alamat();
+            String kelasStasiun = view.getKelasStasiun();
+            String daerahOperasi = view.getStasiun_daerahOperasi();
+            db.updateStasiun(new Stasiun(kodeStasiun, namaStasiun, alamatStasiun, kelasStasiun, daerahOperasi));
+            JOptionPane.showMessageDialog(view, "Data stasiun " + kodeStasiun + " sukses diedit.");
+            loadTableStasiun();
+        }
     }
 }

@@ -9,7 +9,13 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
+import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.table.DefaultTableModel;
 
@@ -392,6 +398,11 @@ public class AdminJFrame extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tbJadwal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tbJadwalMouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(tbJadwal);
 
         jadwal_edit.setBackground(new java.awt.Color(31, 36, 42));
@@ -527,6 +538,11 @@ public class AdminJFrame extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tbKereta.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tbKeretaMouseClicked(evt);
+            }
+        });
         jScrollPane3.setViewportView(tbKereta);
 
         kereta_edit.setBackground(new java.awt.Color(31, 36, 42));
@@ -651,6 +667,11 @@ public class AdminJFrame extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tbKursi.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tbKursiMouseClicked(evt);
+            }
+        });
         jScrollPane4.setViewportView(tbKursi);
 
         kursi_edit.setBackground(new java.awt.Color(31, 36, 42));
@@ -783,6 +804,11 @@ public class AdminJFrame extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tbPetugas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tbPetugasMouseClicked(evt);
+            }
+        });
         jScrollPane5.setViewportView(tbPetugas);
 
         petugas_edit.setBackground(new java.awt.Color(31, 36, 42));
@@ -951,6 +977,11 @@ public class AdminJFrame extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tbStasiun.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tbStasiunMouseClicked(evt);
+            }
+        });
         jScrollPane6.setViewportView(tbStasiun);
 
         stasiun_edit.setBackground(new java.awt.Color(31, 36, 42));
@@ -1143,6 +1174,144 @@ public class AdminJFrame extends javax.swing.JFrame {
         else gerbong_rbTerisi.setSelected(true);
     }//GEN-LAST:event_tbGerbongMouseClicked
 
+    private void tbJadwalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbJadwalMouseClicked
+        int row = tbJadwal.getSelectedRow();
+        String kodeJadwal = tbJadwal.getModel().getValueAt(row, 0).toString();
+        String idKereta = tbJadwal.getModel().getValueAt(row, 1).toString();
+        String stasiunAsal = tbJadwal.getModel().getValueAt(row, 2).toString();
+        String stasiunTujuan = tbJadwal.getModel().getValueAt(row, 3).toString();
+        String tanggalBerangkat = tbJadwal.getModel().getValueAt(row, 4).toString();
+        String jamBerangkat = tbJadwal.getModel().getValueAt(row, 5).toString();
+        String jamTiba = tbJadwal.getModel().getValueAt(row, 6).toString();
+        
+        jadwal_kodeJadwal.setText(kodeJadwal);
+        
+        for(int i = 0; i < jadwal_idKereta.getItemCount(); i++){
+            if(jadwal_idKereta.getItemAt(i).toString().equals(idKereta)){
+                jadwal_idKereta.setSelectedIndex(i);
+            }
+        }
+        
+        for(int i = 0; i < jadwal_stasiunAsal.getItemCount(); i++){
+            if(jadwal_stasiunAsal.getItemAt(i).toString().equals(stasiunAsal)){
+                jadwal_stasiunAsal.setSelectedIndex(i);
+            }
+        }
+        
+        for(int i = 0; i < jadwal_stasiunTujuan.getItemCount(); i++){
+            if(jadwal_stasiunTujuan.getItemAt(i).toString().equals(stasiunTujuan)){
+                jadwal_stasiunTujuan.setSelectedIndex(i);
+            }
+        }
+        Date tgl = null;
+        DateFormat format = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
+        try {
+            tgl = format.parse(tanggalBerangkat);
+        } catch (ParseException ex) {
+            Logger.getLogger(AdminJFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        jadwal_tglBerangkat.setDate(tgl);  
+        jadwal_jamBerangkat.setText(jamBerangkat);
+        jadwal_jamTiba.setText(jamTiba);
+    }//GEN-LAST:event_tbJadwalMouseClicked
+
+    private void tbKeretaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbKeretaMouseClicked
+        int row = tbKereta.getSelectedRow();
+        String idKereta = tbKereta.getModel().getValueAt(row, 0).toString();
+        String namaKereta = tbKereta.getModel().getValueAt(row, 1).toString();
+        String kapasitas = tbKereta.getModel().getValueAt(row, 2).toString();
+        String kelasKereta = tbKereta.getModel().getValueAt(row, 3).toString();
+        
+        kereta_idKereta.setText(idKereta);
+        kereta_namaKereta.setText(namaKereta);
+        kereta_kapasitas.setText(kapasitas);
+        
+        if(kelasKereta.equals("Eksekutif")){
+            kereta_rbEksekutif.setSelected(true);
+        }
+        else if (kelasKereta.equals("Bisnis")) { 
+            kereta_rbBisnis.setSelected(true);
+        } else {
+            kereta_rbEkonomi.setSelected(true);
+        }
+    }//GEN-LAST:event_tbKeretaMouseClicked
+
+    private void tbKursiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbKursiMouseClicked
+        int row = tbKursi.getSelectedRow();
+        String idKursi = tbKursi.getModel().getValueAt(row, 0).toString();
+        String idGerbong = tbKursi.getModel().getValueAt(row, 1).toString();
+        String kolomKursi = tbKursi.getModel().getValueAt(row, 2).toString();
+        String barisKursi = tbKursi.getModel().getValueAt(row, 3).toString();
+        String statusKursi = tbKursi.getModel().getValueAt(row, 4).toString();
+        
+        kursi_idKursi.setText(idKursi);
+        for(int i = 0; i < kursi_idGerbong.getItemCount(); i++){
+            if(kursi_idGerbong.getItemAt(i).toString().equals(idGerbong)){
+                kursi_idGerbong.setSelectedIndex(i);
+            }
+        }
+        
+        kursi_kolomKursi.setText(kolomKursi);
+        kursi_barisKursi.setText(barisKursi);
+        
+        if(statusKursi.equals("Tersedia")) kursi_rbTersedia.setSelected(true);
+        else kursi_rbTerisi.setSelected(true);
+    }//GEN-LAST:event_tbKursiMouseClicked
+
+    private void tbPetugasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbPetugasMouseClicked
+        int row = tbPetugas.getSelectedRow();
+        String idPetugas = tbPetugas.getModel().getValueAt(row, 0).toString();
+        String nama = tbPetugas.getModel().getValueAt(row, 1).toString();
+        String jenisKelamin = tbPetugas.getModel().getValueAt(row, 2).toString();
+        String tanggalLahir = tbPetugas.getModel().getValueAt(row, 3).toString();
+        String noHp = tbPetugas.getModel().getValueAt(row, 4).toString();
+        String email = tbPetugas.getModel().getValueAt(row, 5).toString();
+        String alamat = tbPetugas.getModel().getValueAt(row, 6).toString();
+        
+        
+        Date tgl = null;
+        DateFormat format = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
+        try {
+            tgl = format.parse(tanggalLahir);
+        } catch (ParseException ex) {
+            Logger.getLogger(AdminJFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+         
+        jadwal_tglBerangkat.setDate(tgl);
+        petugas_idPetugas.setText(idPetugas);
+        petugas_nama.setText(nama);
+        petugas_noHP.setText(noHp);
+        petugas_email.setText(email);
+        petugas_alamat.setText(alamat);
+        
+        // radio button
+        if(jenisKelamin.equals("L")) petugas_rbL.setSelected(true);
+        else petugas_rbP.setSelected(true);
+    }//GEN-LAST:event_tbPetugasMouseClicked
+
+    private void tbStasiunMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbStasiunMouseClicked
+        int row = tbStasiun.getSelectedRow();
+        String kodeStasiun = tbStasiun.getModel().getValueAt(row, 0).toString();
+        String namaStasiun = tbStasiun.getModel().getValueAt(row, 1).toString();
+        String alamatStasiun = tbStasiun.getModel().getValueAt(row, 2).toString();
+        String kelasStasiun = tbStasiun.getModel().getValueAt(row, 3).toString();
+        String daerahOperasi = tbStasiun.getModel().getValueAt(row, 4).toString();
+        
+        
+        
+        stasiun_kodeStasiun.setText(kodeStasiun);
+        stasiun_namaStasiun.setText(namaStasiun);
+        stasiun_alamat.setText(alamatStasiun);
+        stasiun_daerahOperasi.setText(daerahOperasi);
+        
+        // radio button
+        if(kelasStasiun.equals("Lokal")) stasiun_rbLokal.setSelected(true);
+        else stasiun_rbInterlokal.setSelected(true);
+    }//GEN-LAST:event_tbStasiunMouseClicked
+
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -1564,6 +1733,10 @@ public class AdminJFrame extends javax.swing.JFrame {
 
     public String getPetugas_tglLahir() {
         return tglLahirString;
+    }
+    
+    public String getPetugas_password(){
+        return petugas_password.getText();
     }
 
     public String getStasiun_alamat() {

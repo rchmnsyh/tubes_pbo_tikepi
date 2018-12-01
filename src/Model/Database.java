@@ -537,6 +537,73 @@ public class Database {
         disconnect();
     }
     
+    public void addJadwal(Jadwal j) {
+        connect();
+        String query = "INSERT INTO jadwal VALUES (";
+        query += "'" + j.getKodeJadwal() + "',";
+        query += "'" + j.getIdKereta() + "',";
+        query += "'" + j.getStasiunAsal() + "',";
+        query += "'" + j.getStasiunTujuan() + "',";
+        query += "'" + j.getTglBerangkat() + "',";
+        query += "'" + j.getJamBerangkat() + "',";
+        query += "'" + j.getJamTiba() + "'";
+        query += ")";
+        if (manipulate(query)) jadwal.add(j);
+        disconnect();
+    }
+    
+    public void addKereta(Kereta k) {
+        connect();
+        String query = "INSERT INTO kereta VALUES (";
+        query += "'" + k.getIdKereta() + "',";
+        query += "'" + k.getNamaKereta() + "',";
+        query += "'" + k.getKapasitasKereta() + "',";
+        query += "'" + k.getKelasKereta() + "'";
+        query += ")";
+        if (manipulate(query)) kereta.add(k);
+        disconnect();
+    }
+    
+    public void addKursi(Kursi krs){
+        connect();
+        String query = "INSERT INTO kursi VALUES (";
+        query += "'" + krs.getIdKursi() + "',";
+        query += "'" + krs.getIdGerbong()+ "',";
+        query += "'" + krs.getKolomKursi() + "',";
+        query += "'" + krs.getBarisKursi() + "',";
+        query += "'" + krs.getStatus()+ "')";
+        if (manipulate(query)) kursi.add(krs);
+        disconnect();
+    }
+    
+    public void addPetugas(Petugas g) {
+        connect();
+        String query = "INSERT INTO petugas VALUES (";
+        query += "'" + g.getIdPetugas() + "',";
+        query += "'" + g.getNama() + "',";
+        query += "'" + g.getJenisKelamin() + "',";
+        query += "'" + g.getTanggalLahir() + "',";
+        query += "'" + g.getNoHp() + "',";
+        query += "'" + g.getEmail() + "',";
+        query += "'" + g.getAlamat() + "'";
+        query += ")";
+        if (manipulate(query)) petugas.add(g);
+        disconnect();
+    }
+    
+    public void addStasiun(Stasiun g) {
+        connect();
+        String query = "INSERT INTO stasiun VALUES (";
+        query += "'" + g.getKodeStasiun() + "',";
+        query += "'" + g.getNamaStasiun() + "',";
+        query += "'" + g.getKelasStasiun() + "',";
+        query += "'" + g.getAlamatStasiun() + "',";
+        query += "'" + g.getDaerahOperasi() + "'";
+        query += ")";
+        if (manipulate(query)) stasiun.add(g);
+        disconnect();
+    }
+    
     public void deleteGerbong(Gerbong g) {
         connect();
         String query = "DELETE FROM gerbong WHERE id_gerbong = '" + g.getIdGerbong() + "'";
@@ -544,6 +611,76 @@ public class Database {
             for (Gerbong g1 : gerbong) {
                 if (g1.getIdGerbong().equals(g.getIdGerbong())){
                     gerbong.remove(g);
+                    break;
+                }
+            }
+        }
+        disconnect();
+    }
+    
+    public void deleteJadwal(Jadwal j){
+        connect();
+        String query = "DELETE FROM jadwal WHERE kode_Jadwal = '" + j.getKodeJadwal() + "'";
+        if (manipulate(query)){
+            for(Jadwal j1 : jadwal){
+                if (j1.getKodeJadwal().equals(j.getKodeJadwal())){
+                    jadwal.remove(j);
+                    break;
+                }
+            }
+        }
+        disconnect();
+    }
+    
+    public void deleteKereta(Kereta k){
+        connect();
+        String query = "DELETE FROM kereta WHERE id_kereta = '" + k.getIdKereta() + "'";
+        if (manipulate(query)){
+            for(Kereta k1 : kereta){
+                if (k1.getIdKereta().equals(k.getIdKereta())){
+                    jadwal.remove(k);
+                    break;
+                }
+            }
+        }
+        disconnect();
+    }
+    
+    public void deleteKursi(Kursi krs){
+        connect();
+        String query = "DELETE FROM kursi WHERE id_kursi = '" + krs.getIdKursi() + "'";
+        if (manipulate (query)){
+            for(Kursi krs1 : kursi){
+                if(krs1.getIdKursi().equals(krs.getIdKursi())){
+                    kursi.remove(krs);
+                    break;
+                }
+            }
+        }
+        disconnect();
+    }
+    
+    public void deletePetugas(Petugas g) {
+        connect();
+        String query = "DELETE FROM petugas WHERE idPetugas = '" + g.getIdPetugas() + "'";
+        if (manipulate(query)){
+            for (Petugas g1 : petugas) {
+                if (g1.getIdPetugas().equals(g.getIdPetugas())){
+                    petugas.remove(g);
+                    break;
+                }
+            }
+        }
+        disconnect();
+    }
+    
+     public void deleteStasiun(Stasiun g) {
+        connect();
+        String query = "DELETE FROM stasiun WHERE kode_stasiun = '" + g.getKodeStasiun() + "'";
+        if (manipulate(query)){
+            for (Stasiun g1 : stasiun) {
+                if (g1.getKodeStasiun().equals(g.getKodeStasiun())){
+                    stasiun.remove(g);
                     break;
                 }
             }
@@ -565,6 +702,132 @@ public class Database {
                     g1.setNoGerbong(g.getNoGerbong());
                     g1.setKapasitasGerbong(g.getKapasitasGerbong());
                     g1.setStatusGerbong(g.getStatusGerbong());
+                    break;
+                }
+            }
+        }
+        disconnect();
+    }
+    
+    public void updateJadwal(Jadwal j){
+        connect();
+        String query = "UPDATE jadwal SET";
+        query += " kode_jadwal = '" + j.getKodeJadwal() + "',";
+        query += " id_kereta = '" + j.getIdKereta() + "',";
+        query += " stasiun_asal = '" + j.getStasiunAsal() + "',";
+        query += " stasiun_tujuan = '" + j.getStasiunTujuan() + "',";
+        query += " tgl_berangkat = '" + j.getTglBerangkat() + "',";
+        query += " jam_berangkat = '" + j.getJamBerangkat() + "',";
+        query += " jam_tiba = '" + j.getJamTiba() + "'";
+        query += "WHERE kode_jadwal = '" + j.getIdKereta() + "'";
+        if (manipulate(query)){
+            for (Jadwal j1 : jadwal){
+                if(j1.getKodeJadwal().equals(j.getKodeJadwal())){
+                    j1.setIdKereta(j.getIdKereta());
+                    j1.setStasiunAsal(j.getStasiunAsal());
+                    j1.setStasiunTujuan(j.getStasiunTujuan());
+                    j1.setTglBerangkat(j.getTglBerangkat());
+                    j1.setJamBerangkat(j.getJamBerangkat());
+                    j1.setJamTiba(j.getJamTiba());
+                    break;
+                }
+            }
+            System.out.println("jalan");
+        }
+        disconnect();
+    }
+    
+    public void updateKereta(Kereta k){
+        connect();
+        String query = "UPDATE kereta SET";
+        query += " id_kereta '" + k.getIdKereta() + "',";
+        query += " nama_kereta '" + k.getNamaKereta() + "',";
+        query += " kapasitas '" + k.getKapasitasKereta() + "',";
+        query += " kelas '" + k.getKelasKereta() + "'";
+        query += "WHERE id_kereta = '" + k.getIdKereta() + "'";
+        if(manipulate(query)){
+            for (Kereta k1 : kereta){
+                if(k1.getIdKereta().equals(k.getIdKereta())){
+                    k1.setIdKereta(k.getIdKereta());
+                    k1.setNamaKereta(k.getNamaKereta());
+                    k1.setKapasitasKereta(k.getKapasitasKereta());
+                    k1.setKelasKereta(k.getKelasKereta());
+                    break;
+                }
+            }
+        }
+        disconnect();
+    }
+    
+    public void updateKursi(Kursi krs){
+        connect();
+        String query = "UPDATE kursi SET";
+        query += " id_kursi '" + krs.getIdKursi() + "',";
+        query += " id_gerbong '" + krs.getIdGerbong() + "',";
+        query += " kolom_kursi '" + krs.getKolomKursi() + "',";
+        query += " baris_kursi '" + krs.getBarisKursi() + "'";
+        query += " status '" + krs.getStatus() + "'";
+        query += "WHERE id_kursi = '" + krs.getIdKursi() + "'";
+        if(manipulate(query)){
+            for(Kursi krs1 : kursi){
+                if(krs1.getIdKursi().equals(krs.getIdKursi())){
+                    krs1.setIdKursi(krs.getIdKursi());
+                    krs1.setIdGerbong(krs.getIdGerbong());
+                    krs1.setKolomKursi(krs.getKolomKursi());
+                    krs1.setBarisKursi(krs.getBarisKursi());
+                    krs1.setStatus(krs.getStatus());
+                    break;
+                }
+            }
+        }
+        disconnect();
+    }
+    
+     public void updatePetugas(Petugas g) {
+        connect();
+        String query = "UPDATE petugas SET";
+        query += " id_petugas = '" + g.getIdPetugas() + "',";
+        query += " nama = '" + g.getNama() + "',";
+        query += " jenis_kelamin = '" + g.getJenisKelamin() + "',";
+        query += " tgl_lahir = '" + g.getTanggalLahir() + "',";
+        query += " no_hp = '" + g.getNoHp() + "',";
+        query += " email = '" + g.getEmail() + "',";
+        query += " alamat = '" + g.getAlamat() + "',";
+        query += " password = '" + g.getPassword() + "'";
+        query += " WHERE id_petugas = '" + g.getIdPetugas() + "'";
+        if (manipulate(query)){
+            for (Petugas g1 : petugas) {
+                if (g1.getIdPetugas().equals(g.getIdPetugas())){
+                    g1.setNama(g.getNama());
+                    g1.setJenisKelamin(g.getJenisKelamin());
+                    g1.setTanggalLahir(g.getTanggalLahir());
+                    g1.setNoHp(g.getNoHp());
+                    g1.setEmail(g.getEmail());
+                    g1.setAlamat(g.getAlamat());
+                    g1.setPassword(g.getPassword());
+                    break;
+                }
+            }
+        }
+        disconnect();
+    }
+     
+     public void updateStasiun(Stasiun g) {
+        connect();
+        String query = "UPDATE gerbong SET";
+        query += " kode_stasiun = '" + g.getKodeStasiun() + "',";
+        query += " nama_stasiun = '" + g.getNamaStasiun() + "',";
+        query += " kelas_stasiun = '" + g.getKelasStasiun() + "',";
+        query += " alamat_stasiun = '" + g.getAlamatStasiun() + "',";
+        query += " daerah_operasi = '" + g.getDaerahOperasi() + "'";
+        query += " WHERE kode_stasiun = '" + g.getKodeStasiun() + "'";
+        if (manipulate(query)){
+            for (Stasiun g1 : stasiun) {
+                if (g1.getKodeStasiun().equals(g.getKodeStasiun())){
+                    g1.setNamaStasiun(g.getNamaStasiun());
+                    g1.setKelasStasiun(g.getKelasStasiun());
+                    g1.setAlamatStasiun(g.getAlamatStasiun());
+                    g1.setDaerahOperasi(g.getDaerahOperasi());
                     break;
                 }
             }
