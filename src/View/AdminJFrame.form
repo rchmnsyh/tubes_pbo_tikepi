@@ -23,6 +23,8 @@
     </Component>
     <Component class="javax.swing.ButtonGroup" name="buttonGroup4">
     </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup5">
+    </Component>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
@@ -215,29 +217,29 @@
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jTextField4" max="32767" attributes="0"/>
-                              <Component id="jTextField3" max="32767" attributes="0"/>
-                              <Component id="jTextField2" max="32767" attributes="0"/>
-                              <Component id="jTextField1" max="32767" attributes="0"/>
+                              <Component id="gerbong_kapasitas" pref="230" max="32767" attributes="0"/>
+                              <Component id="gerbong_noGerbong" max="32767" attributes="0"/>
+                              <Component id="gerbong_idGerbong" max="32767" attributes="0"/>
+                              <Component id="gerbong_idKereta" alignment="0" max="32767" attributes="0"/>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jRadioButton1" min="-2" pref="117" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="gerbong_rbTersedia" min="-2" max="-2" attributes="0"/>
+                                      <Component id="gerbong_rbTerisi" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="0" pref="113" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="jScrollPane1" alignment="1" max="32767" attributes="0"/>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jButton2" min="-2" pref="127" max="-2" attributes="0"/>
+                                  <Component id="gerbong_simpan" min="-2" pref="127" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jButton1" min="-2" pref="127" max="-2" attributes="0"/>
+                                  <Component id="gerbong_edit" min="-2" pref="127" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
-                                  <Component id="jButton3" min="-2" pref="127" max="-2" attributes="0"/>
+                                  <Component id="gerbong_hapus" min="-2" pref="127" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jButton5" min="-2" pref="127" max="-2" attributes="0"/>
+                                  <Component id="gerbong_refresh" min="-2" pref="127" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -247,44 +249,46 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="24" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jScrollPane1" min="-2" pref="318" max="-2" attributes="0"/>
-                              <Group type="102" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jScrollPane1" min="-2" pref="318" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="gerbong_edit" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <Component id="gerbong_hapus" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <Component id="gerbong_refresh" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <Component id="gerbong_simpan" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="gerbong_idGerbong" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="gerbong_idKereta" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="gerbong_noGerbong" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="gerbong_kapasitas" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jLabel9" max="32767" attributes="0"/>
-                                      <Component id="jRadioButton1" pref="0" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="gerbong_rbTersedia" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jRadioButton2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="gerbong_rbTerisi" min="-2" max="-2" attributes="0"/>
                               </Group>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jButton1" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="jButton3" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="jButton5" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="jButton2" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -299,7 +303,7 @@
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTable" name="jTable1">
+                    <Component class="javax.swing.JTable" name="tbGerbong">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="f0" green="f0" red="f0" type="rgb"/>
@@ -316,10 +320,13 @@
                           </Table>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tbGerbongMouseClicked"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JButton" name="jButton1">
+                <Component class="javax.swing.JButton" name="gerbong_edit">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="4a" green="41" red="37" type="rgb"/>
@@ -330,7 +337,7 @@
                     <Property name="text" type="java.lang.String" value="Edit"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton2">
+                <Component class="javax.swing.JButton" name="gerbong_simpan">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="4a" green="41" red="37" type="rgb"/>
@@ -341,10 +348,10 @@
                     <Property name="text" type="java.lang.String" value="Simpan"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="gerbong_simpanActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton3">
+                <Component class="javax.swing.JButton" name="gerbong_hapus">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="4a" green="41" red="37" type="rgb"/>
@@ -355,7 +362,7 @@
                     <Property name="text" type="java.lang.String" value="Hapus"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton5">
+                <Component class="javax.swing.JButton" name="gerbong_refresh">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="4a" green="41" red="37" type="rgb"/>
@@ -374,10 +381,7 @@
                     <Property name="text" type="java.lang.String" value="ID Gerbong"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField1">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField1"/>
-                  </Properties>
+                <Component class="javax.swing.JTextField" name="gerbong_idGerbong">
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel6">
                   <Properties>
@@ -385,11 +389,6 @@
                       <Color blue="f0" green="f0" red="f0" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="ID Kereta"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTextField2">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField1"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel7">
@@ -400,10 +399,7 @@
                     <Property name="text" type="java.lang.String" value="No Gerbong"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField3">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField1"/>
-                  </Properties>
+                <Component class="javax.swing.JTextField" name="gerbong_noGerbong">
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel8">
                   <Properties>
@@ -413,10 +409,17 @@
                     <Property name="text" type="java.lang.String" value="Kapasitas"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField4">
+                <Component class="javax.swing.JTextField" name="gerbong_kapasitas">
+                </Component>
+                <Component class="javax.swing.JComboBox" name="gerbong_idKereta">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField1"/>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="0"/>
+                    </Property>
                   </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel9">
                   <Properties>
@@ -426,32 +429,32 @@
                     <Property name="text" type="java.lang.String" value="Status"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="jRadioButton1">
+                <Component class="javax.swing.JRadioButton" name="gerbong_rbTersedia">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="2a" green="24" red="1f" type="rgb"/>
                     </Property>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="buttonGroup2"/>
+                      <ComponentRef name="buttonGroup5"/>
                     </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="f0" green="f0" red="f0" type="rgb"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Penuh"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JRadioButton" name="jRadioButton2">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="2a" green="24" red="1f" type="rgb"/>
-                    </Property>
-                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="buttonGroup2"/>
-                    </Property>
-                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="f0" green="f0" red="f0" type="rgb"/>
+                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Tersedia"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="gerbong_rbTerisi">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="2a" green="24" red="1f" type="rgb"/>
+                    </Property>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroup5"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Terisi"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -486,24 +489,25 @@
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jTextField12" pref="190" max="32767" attributes="0"/>
-                              <Component id="jTextField11" max="32767" attributes="0"/>
-                              <Component id="jTextField7" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jTextField6" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jComboBox1" max="32767" attributes="0"/>
-                              <Component id="jComboBox2" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jadwal_jamTiba" pref="190" max="32767" attributes="0"/>
+                              <Component id="jadwal_jamBerangkat" max="32767" attributes="0"/>
+                              <Component id="jadwal_kodeJadwal" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jadwal_stasiunAsal" max="32767" attributes="0"/>
+                              <Component id="jadwal_stasiunTujuan" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jadwal_tglBerangkat" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jadwal_idKereta" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="jScrollPane2" alignment="1" max="32767" attributes="0"/>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jButton7" min="-2" pref="127" max="-2" attributes="0"/>
+                                  <Component id="jadwal_simpan" min="-2" pref="127" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jButton6" min="-2" pref="127" max="-2" attributes="0"/>
+                                  <Component id="jadwal_edit" min="-2" pref="127" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
-                                  <Component id="jButton8" min="-2" pref="127" max="-2" attributes="0"/>
+                                  <Component id="jadwal_hapus" min="-2" pref="127" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jButton9" min="-2" pref="127" max="-2" attributes="0"/>
+                                  <Component id="jadwal_refresh" min="-2" pref="127" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -519,43 +523,46 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jadwal_kodeJadwal" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jadwal_idKereta" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jadwal_stasiunAsal" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jComboBox2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jadwal_stasiunTujuan" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
-                                  <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jadwal_tglBerangkat" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField11" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jadwal_jamBerangkat" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel16" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField12" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jadwal_jamTiba" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jButton6" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="jButton8" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="jButton9" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="jButton7" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="jadwal_edit" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="jadwal_hapus" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="jadwal_refresh" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="jadwal_simpan" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -570,7 +577,7 @@
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTable" name="jTable2">
+                    <Component class="javax.swing.JTable" name="tbJadwal">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                           <Table columnCount="4" rowCount="4">
@@ -584,7 +591,7 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JButton" name="jButton6">
+                <Component class="javax.swing.JButton" name="jadwal_edit">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="2a" green="24" red="1f" type="rgb"/>
@@ -592,7 +599,7 @@
                     <Property name="text" type="java.lang.String" value="Edit"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton7">
+                <Component class="javax.swing.JButton" name="jadwal_simpan">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="2a" green="24" red="1f" type="rgb"/>
@@ -600,7 +607,7 @@
                     <Property name="text" type="java.lang.String" value="Simpan"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton8">
+                <Component class="javax.swing.JButton" name="jadwal_hapus">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="2a" green="24" red="1f" type="rgb"/>
@@ -608,7 +615,7 @@
                     <Property name="text" type="java.lang.String" value="Hapus"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton9">
+                <Component class="javax.swing.JButton" name="jadwal_refresh">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="2a" green="24" red="1f" type="rgb"/>
@@ -624,10 +631,7 @@
                     <Property name="text" type="java.lang.String" value="Kode Jadwal"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField6">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField1"/>
-                  </Properties>
+                <Component class="javax.swing.JTextField" name="jadwal_kodeJadwal">
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel11">
                   <Properties>
@@ -635,11 +639,6 @@
                       <Color blue="f0" green="f0" red="f0" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="ID Kereta"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTextField7">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField1"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel12">
@@ -674,10 +673,7 @@
                     <Property name="text" type="java.lang.String" value="Jam Berangkat"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField11">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField1"/>
-                  </Properties>
+                <Component class="javax.swing.JTextField" name="jadwal_jamBerangkat">
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel16">
                   <Properties>
@@ -687,35 +683,37 @@
                     <Property name="text" type="java.lang.String" value="Jam Tiba"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField12">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField1"/>
-                  </Properties>
+                <Component class="javax.swing.JTextField" name="jadwal_jamTiba">
                 </Component>
-                <Component class="javax.swing.JComboBox" name="jComboBox1">
+                <Component class="javax.swing.JComboBox" name="jadwal_stasiunAsal">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="4">
-                        <StringItem index="0" value="Item 1"/>
-                        <StringItem index="1" value="Item 2"/>
-                        <StringItem index="2" value="Item 3"/>
-                        <StringItem index="3" value="Item 4"/>
-                      </StringArray>
+                      <StringArray count="0"/>
                     </Property>
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="jComboBox2">
+                <Component class="javax.swing.JComboBox" name="jadwal_stasiunTujuan">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="4">
-                        <StringItem index="0" value="Item 1"/>
-                        <StringItem index="1" value="Item 2"/>
-                        <StringItem index="2" value="Item 3"/>
-                        <StringItem index="3" value="Item 4"/>
-                      </StringArray>
+                      <StringArray count="0"/>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
+                </Component>
+                <Component class="com.toedter.calendar.JDateChooser" name="jadwal_tglBerangkat">
+                  <Events>
+                    <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="jadwal_tglBerangkatPropertyChange"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="jadwal_idKereta">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="0"/>
                     </Property>
                   </Properties>
                   <AuxValues>
@@ -752,25 +750,25 @@
                           <EmptySpace pref="11" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jTextField15" pref="224" max="32767" attributes="0"/>
-                                  <Component id="jTextField14" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="jTextField13" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="kereta_kapasitas" pref="224" max="32767" attributes="0"/>
+                                  <Component id="kereta_namaKereta" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="kereta_idKereta" alignment="1" max="32767" attributes="0"/>
                               </Group>
-                              <Component id="jRadioButton3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton4" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton5" min="-2" max="-2" attributes="0"/>
+                              <Component id="kereta_rbEksekutif" min="-2" max="-2" attributes="0"/>
+                              <Component id="kereta_rbBisnis" min="-2" max="-2" attributes="0"/>
+                              <Component id="kereta_rbEkonomi" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="jScrollPane3" alignment="1" max="32767" attributes="0"/>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jButton11" min="-2" pref="127" max="-2" attributes="0"/>
+                                  <Component id="kereta_simpan" min="-2" pref="127" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jButton10" min="-2" pref="127" max="-2" attributes="0"/>
+                                  <Component id="kereta_edit" min="-2" pref="127" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
-                                  <Component id="jButton12" min="-2" pref="127" max="-2" attributes="0"/>
+                                  <Component id="kereta_hapus" min="-2" pref="127" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jButton13" min="-2" pref="127" max="-2" attributes="0"/>
+                                  <Component id="kereta_refresh" min="-2" pref="127" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -786,35 +784,35 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel17" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField13" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="kereta_idKereta" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel18" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField14" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="kereta_namaKereta" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel19" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField15" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="kereta_kapasitas" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel20" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="kereta_rbEksekutif" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jRadioButton4" min="-2" max="-2" attributes="0"/>
+                                  <Component id="kereta_rbBisnis" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jRadioButton5" min="-2" max="-2" attributes="0"/>
+                                  <Component id="kereta_rbEkonomi" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jButton10" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="jButton12" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="jButton13" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="jButton11" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="kereta_edit" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="kereta_hapus" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="kereta_refresh" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="kereta_simpan" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -829,7 +827,7 @@
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTable" name="jTable3">
+                    <Component class="javax.swing.JTable" name="tbKereta">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                           <Table columnCount="4" rowCount="4">
@@ -843,7 +841,7 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JButton" name="jButton10">
+                <Component class="javax.swing.JButton" name="kereta_edit">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="2a" green="24" red="1f" type="rgb"/>
@@ -851,7 +849,7 @@
                     <Property name="text" type="java.lang.String" value="Edit"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton11">
+                <Component class="javax.swing.JButton" name="kereta_simpan">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="2a" green="24" red="1f" type="rgb"/>
@@ -859,7 +857,7 @@
                     <Property name="text" type="java.lang.String" value="Simpan"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton12">
+                <Component class="javax.swing.JButton" name="kereta_hapus">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="2a" green="24" red="1f" type="rgb"/>
@@ -867,7 +865,7 @@
                     <Property name="text" type="java.lang.String" value="Hapus"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton13">
+                <Component class="javax.swing.JButton" name="kereta_refresh">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="2a" green="24" red="1f" type="rgb"/>
@@ -883,10 +881,7 @@
                     <Property name="text" type="java.lang.String" value="ID Kereta"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField13">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField1"/>
-                  </Properties>
+                <Component class="javax.swing.JTextField" name="kereta_idKereta">
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel18">
                   <Properties>
@@ -896,10 +891,7 @@
                     <Property name="text" type="java.lang.String" value="Nama Kereta"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField14">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField1"/>
-                  </Properties>
+                <Component class="javax.swing.JTextField" name="kereta_namaKereta">
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel19">
                   <Properties>
@@ -909,10 +901,7 @@
                     <Property name="text" type="java.lang.String" value="Kapasitas"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField15">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField1"/>
-                  </Properties>
+                <Component class="javax.swing.JTextField" name="kereta_kapasitas">
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel20">
                   <Properties>
@@ -922,7 +911,7 @@
                     <Property name="text" type="java.lang.String" value="Kelas"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="jRadioButton3">
+                <Component class="javax.swing.JRadioButton" name="kereta_rbEksekutif">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="2a" green="24" red="1f" type="rgb"/>
@@ -936,7 +925,7 @@
                     <Property name="text" type="java.lang.String" value="Eksekutif"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="jRadioButton4">
+                <Component class="javax.swing.JRadioButton" name="kereta_rbBisnis">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="2a" green="24" red="1f" type="rgb"/>
@@ -950,7 +939,7 @@
                     <Property name="text" type="java.lang.String" value="Bisnis"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="jRadioButton5">
+                <Component class="javax.swing.JRadioButton" name="kereta_rbEkonomi">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="2a" green="24" red="1f" type="rgb"/>
@@ -986,29 +975,46 @@
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel21" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel22" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel23" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel24" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace pref="8" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jTextField19" pref="234" max="32767" attributes="0"/>
-                              <Component id="jTextField18" alignment="1" max="32767" attributes="0"/>
-                              <Component id="jTextField17" alignment="1" max="32767" attributes="0"/>
-                              <Component id="jTextField20" max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel21" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel22" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel23" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel24" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="kursi_idGerbong" max="32767" attributes="0"/>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="kursi_rbTersedia" min="-2" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Component id="kursi_kolomKursi" pref="234" max="32767" attributes="0"/>
+                                                  <Component id="kursi_idKursi" alignment="1" max="32767" attributes="0"/>
+                                                  <Component id="kursi_barisKursi" max="32767" attributes="0"/>
+                                              </Group>
+                                              <Component id="kursi_rbTerisi" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jLabel39" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="jScrollPane4" alignment="1" max="32767" attributes="0"/>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jButton15" min="-2" pref="127" max="-2" attributes="0"/>
+                                  <Component id="kursi_simpan" min="-2" pref="127" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jButton14" min="-2" pref="127" max="-2" attributes="0"/>
+                                  <Component id="kursi_edit" min="-2" pref="127" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
-                                  <Component id="jButton16" min="-2" pref="127" max="-2" attributes="0"/>
+                                  <Component id="kursi_hapus" min="-2" pref="127" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jButton17" min="-2" pref="127" max="-2" attributes="0"/>
+                                  <Component id="kursi_refresh" min="-2" pref="127" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -1018,37 +1024,44 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="24" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jScrollPane4" alignment="0" min="-2" pref="318" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel21" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField17" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="kursi_idKursi" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel22" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField18" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="kursi_idGerbong" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel23" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField19" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="kursi_kolomKursi" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel24" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField20" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="kursi_barisKursi" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel39" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="kursi_rbTersedia" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="kursi_rbTerisi" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jButton14" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="jButton16" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="jButton17" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="jButton15" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="kursi_edit" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="kursi_hapus" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="kursi_refresh" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="kursi_simpan" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -1063,7 +1076,7 @@
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTable" name="jTable4">
+                    <Component class="javax.swing.JTable" name="tbKursi">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                           <Table columnCount="4" rowCount="4">
@@ -1077,7 +1090,7 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JButton" name="jButton14">
+                <Component class="javax.swing.JButton" name="kursi_edit">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="2a" green="24" red="1f" type="rgb"/>
@@ -1085,7 +1098,7 @@
                     <Property name="text" type="java.lang.String" value="Edit"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton15">
+                <Component class="javax.swing.JButton" name="kursi_simpan">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="2a" green="24" red="1f" type="rgb"/>
@@ -1093,7 +1106,7 @@
                     <Property name="text" type="java.lang.String" value="Simpan"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton16">
+                <Component class="javax.swing.JButton" name="kursi_hapus">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="2a" green="24" red="1f" type="rgb"/>
@@ -1101,7 +1114,7 @@
                     <Property name="text" type="java.lang.String" value="Hapus"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton17">
+                <Component class="javax.swing.JButton" name="kursi_refresh">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="2a" green="24" red="1f" type="rgb"/>
@@ -1117,10 +1130,7 @@
                     <Property name="text" type="java.lang.String" value="ID Kursi"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField17">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField1"/>
-                  </Properties>
+                <Component class="javax.swing.JTextField" name="kursi_idKursi">
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel22">
                   <Properties>
@@ -1128,11 +1138,6 @@
                       <Color blue="f0" green="f0" red="f0" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="ID Gerbong"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTextField18">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField1"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel23">
@@ -1143,10 +1148,7 @@
                     <Property name="text" type="java.lang.String" value="Kolom Kursi"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField19">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField1"/>
-                  </Properties>
+                <Component class="javax.swing.JTextField" name="kursi_kolomKursi">
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel24">
                   <Properties>
@@ -1156,9 +1158,52 @@
                     <Property name="text" type="java.lang.String" value="Baris Kursi"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField20">
+                <Component class="javax.swing.JTextField" name="kursi_barisKursi">
+                </Component>
+                <Component class="javax.swing.JComboBox" name="kursi_idGerbong">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField1"/>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="0"/>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel39">
+                  <Properties>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f0" green="f0" red="f0" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Status"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="kursi_rbTersedia">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="2a" green="24" red="1f" type="rgb"/>
+                    </Property>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroup2"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Tersedia"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="kursi_rbTerisi">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="2a" green="24" red="1f" type="rgb"/>
+                    </Property>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroup2"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Terisi"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -1183,42 +1228,50 @@
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel25" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel26" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel27" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel28" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel29" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel30" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel31" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel32" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jTextField28" max="32767" attributes="0"/>
-                              <Component id="jTextField27" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jTextField26" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jTextField25" alignment="0" pref="219" max="32767" attributes="0"/>
-                              <Component id="jTextField22" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jTextField21" alignment="0" max="32767" attributes="0"/>
-                              <Group type="102" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jLabel28" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="petugas_tglLahir" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jRadioButton6" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton7" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel25" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel26" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel27" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel29" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel30" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel31" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel38" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="petugas_email" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="petugas_noHP" alignment="0" pref="219" max="32767" attributes="0"/>
+                                      <Component id="petugas_nama" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="petugas_idPetugas" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jScrollPane7" alignment="0" max="32767" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="petugas_rbP" min="-2" max="-2" attributes="0"/>
+                                              <Component id="petugas_rbL" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Component id="petugas_password" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="jScrollPane5" alignment="1" max="32767" attributes="0"/>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jButton19" min="-2" pref="127" max="-2" attributes="0"/>
+                                  <Component id="petugas_simpan" min="-2" pref="127" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jButton18" min="-2" pref="127" max="-2" attributes="0"/>
+                                  <Component id="petugas_edit" min="-2" pref="127" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
-                                  <Component id="jButton20" min="-2" pref="127" max="-2" attributes="0"/>
+                                  <Component id="petugas_hapus" min="-2" pref="127" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jButton21" min="-2" pref="127" max="-2" attributes="0"/>
+                                  <Component id="petugas_refresh" min="-2" pref="127" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -1229,57 +1282,60 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jScrollPane5" alignment="0" min="-2" pref="318" max="-2" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="jScrollPane5" min="-2" pref="318" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel25" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField21" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="petugas_idPetugas" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel26" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField22" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="petugas_nama" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel27" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="petugas_rbL" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
-                                  <Component id="jRadioButton7" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jLabel28" min="-2" max="-2" attributes="0"/>
+                                  <Component id="petugas_rbP" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="petugas_tglLahir" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel28" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel29" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField25" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="petugas_noHP" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel30" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField26" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="petugas_email" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jLabel31" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField27" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel31" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jScrollPane7" min="-2" pref="85" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jLabel32" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField28" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="petugas_password" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel38" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jButton18" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="jButton20" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="jButton21" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="jButton19" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="petugas_edit" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="petugas_hapus" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="petugas_refresh" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="petugas_simpan" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1292,7 +1348,7 @@
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTable" name="jTable5">
+                    <Component class="javax.swing.JTable" name="tbPetugas">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                           <Table columnCount="4" rowCount="4">
@@ -1306,7 +1362,7 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JButton" name="jButton18">
+                <Component class="javax.swing.JButton" name="petugas_edit">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="2a" green="24" red="1f" type="rgb"/>
@@ -1314,7 +1370,7 @@
                     <Property name="text" type="java.lang.String" value="Edit"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton19">
+                <Component class="javax.swing.JButton" name="petugas_simpan">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="2a" green="24" red="1f" type="rgb"/>
@@ -1322,7 +1378,7 @@
                     <Property name="text" type="java.lang.String" value="Simpan"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton20">
+                <Component class="javax.swing.JButton" name="petugas_hapus">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="2a" green="24" red="1f" type="rgb"/>
@@ -1330,7 +1386,7 @@
                     <Property name="text" type="java.lang.String" value="Hapus"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton21">
+                <Component class="javax.swing.JButton" name="petugas_refresh">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="2a" green="24" red="1f" type="rgb"/>
@@ -1346,10 +1402,7 @@
                     <Property name="text" type="java.lang.String" value="ID Petugas"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField21">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField1"/>
-                  </Properties>
+                <Component class="javax.swing.JTextField" name="petugas_idPetugas">
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel26">
                   <Properties>
@@ -1359,10 +1412,7 @@
                     <Property name="text" type="java.lang.String" value="Nama"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField22">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField1"/>
-                  </Properties>
+                <Component class="javax.swing.JTextField" name="petugas_nama">
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel27">
                   <Properties>
@@ -1380,10 +1430,7 @@
                     <Property name="text" type="java.lang.String" value="Tanggal Lahir"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField25">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField1"/>
-                  </Properties>
+                <Component class="javax.swing.JTextField" name="petugas_noHP">
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel29">
                   <Properties>
@@ -1401,10 +1448,7 @@
                     <Property name="text" type="java.lang.String" value="Email"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField26">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField1"/>
-                  </Properties>
+                <Component class="javax.swing.JTextField" name="petugas_email">
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel31">
                   <Properties>
@@ -1414,25 +1458,7 @@
                     <Property name="text" type="java.lang.String" value="Alamat"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField27">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField1"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel32">
-                  <Properties>
-                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="f0" green="f0" red="f0" type="rgb"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Lama Kerja"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTextField28">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField1"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JRadioButton" name="jRadioButton6">
+                <Component class="javax.swing.JRadioButton" name="petugas_rbL">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="2a" green="24" red="1f" type="rgb"/>
@@ -1446,7 +1472,7 @@
                     <Property name="text" type="java.lang.String" value="Laki-laki"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="jRadioButton7">
+                <Component class="javax.swing.JRadioButton" name="petugas_rbP">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="2a" green="24" red="1f" type="rgb"/>
@@ -1459,6 +1485,36 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Perempuan"/>
                   </Properties>
+                </Component>
+                <Component class="com.toedter.calendar.JDateChooser" name="petugas_tglLahir">
+                  <Events>
+                    <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="petugas_tglLahirPropertyChange"/>
+                  </Events>
+                </Component>
+                <Container class="javax.swing.JScrollPane" name="jScrollPane7">
+                  <AuxValues>
+                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                  </AuxValues>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                  <SubComponents>
+                    <Component class="javax.swing.JTextArea" name="petugas_alamat">
+                      <Properties>
+                        <Property name="columns" type="int" value="20"/>
+                        <Property name="rows" type="int" value="5"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Component class="javax.swing.JLabel" name="jLabel38">
+                  <Properties>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f0" green="f0" red="f0" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Password"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JPasswordField" name="petugas_password">
                 </Component>
               </SubComponents>
             </Container>
@@ -1490,29 +1546,29 @@
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jTextField33" alignment="0" pref="208" max="32767" attributes="0"/>
-                              <Component id="jTextField31" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jTextField30" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jTextField29" alignment="0" max="32767" attributes="0"/>
+                              <Component id="stasiun_daerahOperasi" alignment="0" pref="208" max="32767" attributes="0"/>
+                              <Component id="stasiun_namaStasiun" alignment="0" max="32767" attributes="0"/>
+                              <Component id="stasiun_kodeStasiun" alignment="0" max="32767" attributes="0"/>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jRadioButton8" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton9" min="-2" max="-2" attributes="0"/>
+                                      <Component id="stasiun_rbLokal" min="-2" max="-2" attributes="0"/>
+                                      <Component id="stasiun_rbInterlokal" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
+                              <Component id="jScrollPane8" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="jScrollPane6" alignment="1" max="32767" attributes="0"/>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jButton23" min="-2" pref="127" max="-2" attributes="0"/>
+                                  <Component id="stasiun_simpan" min="-2" pref="127" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jButton22" min="-2" pref="127" max="-2" attributes="0"/>
+                                  <Component id="stasiun_edit" min="-2" pref="127" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
-                                  <Component id="jButton24" min="-2" pref="127" max="-2" attributes="0"/>
+                                  <Component id="stasiun_hapus" min="-2" pref="127" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jButton25" min="-2" pref="127" max="-2" attributes="0"/>
+                                  <Component id="stasiun_refresh" min="-2" pref="127" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -1528,38 +1584,38 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel33" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField29" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="stasiun_kodeStasiun" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel34" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField30" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="stasiun_namaStasiun" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jLabel35" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField31" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel35" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jScrollPane8" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel36" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton8" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="stasiun_rbLokal" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jRadioButton9" min="-2" max="-2" attributes="0"/>
+                                  <Component id="stasiun_rbInterlokal" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel37" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField33" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="stasiun_daerahOperasi" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jButton22" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="jButton24" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="jButton25" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="jButton23" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="stasiun_edit" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="stasiun_hapus" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="stasiun_refresh" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="stasiun_simpan" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -1574,7 +1630,7 @@
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTable" name="jTable6">
+                    <Component class="javax.swing.JTable" name="tbStasiun">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                           <Table columnCount="4" rowCount="4">
@@ -1588,7 +1644,7 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JButton" name="jButton22">
+                <Component class="javax.swing.JButton" name="stasiun_edit">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="2a" green="24" red="1f" type="rgb"/>
@@ -1596,7 +1652,7 @@
                     <Property name="text" type="java.lang.String" value="Edit"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton23">
+                <Component class="javax.swing.JButton" name="stasiun_simpan">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="2a" green="24" red="1f" type="rgb"/>
@@ -1604,7 +1660,7 @@
                     <Property name="text" type="java.lang.String" value="Simpan"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton24">
+                <Component class="javax.swing.JButton" name="stasiun_hapus">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="2a" green="24" red="1f" type="rgb"/>
@@ -1612,7 +1668,7 @@
                     <Property name="text" type="java.lang.String" value="Hapus"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton25">
+                <Component class="javax.swing.JButton" name="stasiun_refresh">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="2a" green="24" red="1f" type="rgb"/>
@@ -1628,10 +1684,7 @@
                     <Property name="text" type="java.lang.String" value="Kode Stasiun"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField29">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField1"/>
-                  </Properties>
+                <Component class="javax.swing.JTextField" name="stasiun_kodeStasiun">
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel34">
                   <Properties>
@@ -1641,10 +1694,7 @@
                     <Property name="text" type="java.lang.String" value="Nama Stasiun"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField30">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField1"/>
-                  </Properties>
+                <Component class="javax.swing.JTextField" name="stasiun_namaStasiun">
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel35">
                   <Properties>
@@ -1652,11 +1702,6 @@
                       <Color blue="f0" green="f0" red="f0" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Alamat Stasiun"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTextField31">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField1"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel36">
@@ -1667,10 +1712,7 @@
                     <Property name="text" type="java.lang.String" value="Kelas Stasiun"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField33">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField1"/>
-                  </Properties>
+                <Component class="javax.swing.JTextField" name="stasiun_daerahOperasi">
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel37">
                   <Properties>
@@ -1680,7 +1722,7 @@
                     <Property name="text" type="java.lang.String" value="Daerah Operasi"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="jRadioButton8">
+                <Component class="javax.swing.JRadioButton" name="stasiun_rbLokal">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="2a" green="24" red="1f" type="rgb"/>
@@ -1694,7 +1736,7 @@
                     <Property name="text" type="java.lang.String" value="Lokal"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="jRadioButton9">
+                <Component class="javax.swing.JRadioButton" name="stasiun_rbInterlokal">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="2a" green="24" red="1f" type="rgb"/>
@@ -1708,6 +1750,21 @@
                     <Property name="text" type="java.lang.String" value="Interlokal"/>
                   </Properties>
                 </Component>
+                <Container class="javax.swing.JScrollPane" name="jScrollPane8">
+                  <AuxValues>
+                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                  </AuxValues>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                  <SubComponents>
+                    <Component class="javax.swing.JTextArea" name="stasiun_alamat">
+                      <Properties>
+                        <Property name="columns" type="int" value="20"/>
+                        <Property name="rows" type="int" value="5"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
               </SubComponents>
             </Container>
           </SubComponents>

@@ -102,14 +102,11 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="cekTiket" alignment="0" pref="203" max="32767" attributes="0"/>
+                          <Component id="pesanTiket" alignment="0" pref="203" max="32767" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jTextField1" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jButton3" alignment="0" pref="74" max="32767" attributes="0"/>
-                              </Group>
+                              <Component id="loginAdmin" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="pesanTiket" alignment="0" pref="203" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -118,10 +115,8 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                      <Component id="jTextField1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                      <Component id="loginAdmin" min="-2" pref="35" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="pesanTiket" min="-2" pref="61" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -134,6 +129,9 @@
           <SubComponents>
             <Component class="javax.swing.JButton" name="cekTiket">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="24" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Cek Tiket"/>
               </Properties>
               <Events>
@@ -142,20 +140,18 @@
             </Component>
             <Component class="javax.swing.JButton" name="pesanTiket">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="24" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Pesan Tiket"/>
               </Properties>
               <Events>
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="pesanTiketMouseClicked"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField1">
+            <Component class="javax.swing.JButton" name="loginAdmin">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Username"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButton3">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Logout"/>
+                <Property name="text" type="java.lang.String" value="Login Admin"/>
               </Properties>
             </Component>
           </SubComponents>

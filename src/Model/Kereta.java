@@ -14,14 +14,12 @@ public class Kereta {
     private String namaKereta;
     private String kelasKereta;
     private int kapasitasKereta;
-    private String rute;
 
-    public Kereta(String idKereta, String namaKereta, String kelasKereta, int kapasitasKereta, String rute) {
+    public Kereta(String idKereta, String namaKereta, String kelasKereta, int kapasitasKereta) {
         this.idKereta = idKereta;
         this.namaKereta = namaKereta;
         this.kelasKereta = kelasKereta;
         this.kapasitasKereta = kapasitasKereta;
-        this.rute = rute;
     }
 
     public String getIdKereta() {
@@ -40,10 +38,6 @@ public class Kereta {
         return kapasitasKereta;
     }
 
-    public String getRute() {
-        return rute;
-    }
-
     public void setIdKereta(String idKereta) {
         this.idKereta = idKereta;
     }
@@ -58,11 +52,5 @@ public class Kereta {
 
     public void setKapasitasKereta(int kapasitasKereta) {
         this.kapasitasKereta = kapasitasKereta;
-    }
-
-    public void setRute(String rute) {
-        this.rute = rute;
-    }
-    
-    
+    } 
 }

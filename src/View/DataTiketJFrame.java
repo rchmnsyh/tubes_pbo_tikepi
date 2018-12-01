@@ -298,10 +298,6 @@ public class DataTiketJFrame extends javax.swing.JFrame {
     public void addMouseAdapter(MouseAdapter x){
         tbJadwal.addMouseListener(x);
     }
-    
-    public void showMessage(String message, String title, int type){
-        JOptionPane.showMessageDialog(null, message, title, type);
-    }
 
     public String getStasiunAsal() {
         return stasiunAsal.getSelectedItem().toString();

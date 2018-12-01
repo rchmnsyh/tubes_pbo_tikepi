@@ -45,8 +45,7 @@ public class MenuPenumpangJFrame extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         cekTiket = new javax.swing.JButton();
         pesanTiket = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
+        loginAdmin = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -61,6 +60,7 @@ public class MenuPenumpangJFrame extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(31, 36, 42));
 
+        cekTiket.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         cekTiket.setText("Cek Tiket");
         cekTiket.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -68,6 +68,7 @@ public class MenuPenumpangJFrame extends javax.swing.JFrame {
             }
         });
 
+        pesanTiket.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         pesanTiket.setText("Pesan Tiket");
         pesanTiket.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -75,9 +76,7 @@ public class MenuPenumpangJFrame extends javax.swing.JFrame {
             }
         });
 
-        jTextField1.setText("Username");
-
-        jButton3.setText("Logout");
+        loginAdmin.setText("Login Admin");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -87,21 +86,17 @@ public class MenuPenumpangJFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(cekTiket, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
+                    .addComponent(pesanTiket, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField1)
-                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 74, Short.MAX_VALUE)))
-                    .addComponent(pesanTiket, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE))
+                        .addComponent(loginAdmin)))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3)
+                .addContainerGap()
+                .addComponent(loginAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(pesanTiket, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -166,18 +161,18 @@ public class MenuPenumpangJFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton cekTiket;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JButton loginAdmin;
     private javax.swing.JButton pesanTiket;
     // End of variables declaration//GEN-END:variables
 
     public void addActionListener(ActionListener x){
         pesanTiket.addActionListener(x);
         cekTiket.addActionListener(x);
+        loginAdmin.addActionListener(x);
     }
 
     public JButton getCekTiket() {
@@ -186,5 +181,9 @@ public class MenuPenumpangJFrame extends javax.swing.JFrame {
 
     public JButton getPesanTiket() {
         return pesanTiket;
+    }
+    
+    public JButton getLoginAdmin() {
+        return loginAdmin;
     }
 }
