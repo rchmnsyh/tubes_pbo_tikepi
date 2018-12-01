@@ -3,14 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Luminoid/Documents/GitHub/tubes_pbo_tikepi/src/View/AdminJFrame.java</file>
-            <file>file:/C:/Users/Luminoid/Documents/GitHub/tubes_pbo_tikepi/src/Controller/LoginController.java</file>
-            <file>file:/C:/Users/Luminoid/Documents/GitHub/tubes_pbo_tikepi/src/View/MenuPenumpangJFrame.java</file>
-            <file>file:/C:/Users/Luminoid/Documents/GitHub/tubes_pbo_tikepi/src/View/CekTiketJFrame.java</file>
-            <file>file:/C:/Users/Luminoid/Documents/GitHub/tubes_pbo_tikepi/src/Controller/PilihKursiController.java</file>
-            <file>file:/C:/Users/Luminoid/Documents/GitHub/tubes_pbo_tikepi/src/Controller/DataTiketController.java</file>
-            <file>file:/C:/Users/Luminoid/Documents/GitHub/tubes_pbo_tikepi/src/View/LoginJFrame.java</file>
-            <file>file:/C:/Users/Luminoid/Documents/GitHub/tubes_pbo_tikepi/src/Model/Database.java</file>
+            <file>file:/D:/Downloads/tubes_pbo_tikepi/src/Model/Kursi.java</file>
+            <file>file:/D:/Downloads/tubes_pbo_tikepi/src/Controller/PetugasController.java</file>
+            <file>file:/D:/Downloads/tubes_pbo_tikepi/src/Controller/AdminController.java</file>
+            <file>file:/D:/Downloads/tubes_pbo_tikepi/src/View/AdminJFrame.java</file>
+            <file>file:/D:/Downloads/tubes_pbo_tikepi/src/View/LoginJFrame.java</file>
+            <file>file:/D:/Downloads/tubes_pbo_tikepi/src/Model/Database.java</file>
         </group>
     </open-files>
 </project-private>
