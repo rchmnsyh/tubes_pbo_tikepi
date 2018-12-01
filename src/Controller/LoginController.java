@@ -6,22 +6,22 @@
 package Controller;
 
 import Model.Database;
-import View.MenuPenumpangJFrame;
+import View.LoginJFrame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
+
 
 /**
  *
  * @author R Λ C H
  */
-public class MenuPenumpangController extends MouseAdapter implements ActionListener{
-    
-    private MenuPenumpangJFrame view;
+public class LoginController extends MouseAdapter implements ActionListener{
+    private LoginJFrame view;
     private Database db;
     
-    public MenuPenumpangController(){
-        view = new MenuPenumpangJFrame();
+    public LoginController() {
+        view = new LoginJFrame();
         db = new Database();
         view.addActionListener(this);
         view.setVisible(true);
@@ -30,16 +30,16 @@ public class MenuPenumpangController extends MouseAdapter implements ActionListe
     @Override
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
-        if (source.equals(view.getPesanTiket())){
-            new DataTiketController();
-            view.setVisible(false);
-        }
-        else if(source.equals(view.getCekTiket())){
-            //
-        }
-        else if(source.equals(view.getLoginAdmin())){
-            new LoginController();
-            view.setVisible(false);
+        if(source.equals(view.getLogin())){
+            String username = view.getTfUsername();
+            String password = view.getTfPassword();
+            if(username.equals("admin") && password.equals("hiyahiyahiya")){
+                new AdminController();
+                view.setVisible(false);
+            }
+            else{
+                
+            }
         }
     }
 }
