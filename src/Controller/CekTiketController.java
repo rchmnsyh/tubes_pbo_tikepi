@@ -34,12 +34,21 @@ public class CekTiketController extends MouseAdapter implements ActionListener{
         if(source.equals(view.getBtCek())){
             System.out.println("Belum bisa, di sout aja gak keluar apa-apa :(");
             Tiket t = db.cekTiket(view.getKodeTiket());
+            String bayar;
+            if(t.getIdPenumpang().equals("PTGS000")){
+                bayar = "\nStatus: Belum dibayar";
+            }
+            else{
+                bayar = "\nStatus: Lunas";
+            }
+            
             String detail = "ID Penumpang: " + t.getIdPenumpang()
                           + "\nKode Jadwal: " + t.getKodeJadwal()
                           + "\nID Kursi: " + t.getIdKursi()
                           + "\nID Kereta: " + t.getIdKereta()
                           + "\nTanggal Pesan: " + t.getTglPesanan()
-                          + "\nHarga: " + t.getHarga();
+                          + "\nHarga: " + t.getHarga()
+                          + bayar;
             view.setDetailTiket(detail);
         }
     }
