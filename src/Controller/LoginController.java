@@ -6,10 +6,13 @@
 package Controller;
 
 import Model.Database;
+import Model.Petugas;
 import View.LoginJFrame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 
 /**
@@ -31,14 +34,27 @@ public class LoginController extends MouseAdapter implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
         if(source.equals(view.getLogin())){
+            boolean login = false;
             String username = view.getTfUsername();
             String password = view.getTfPassword();
             if(username.equals("admin") && password.equals("hiyahiyahiya")){
                 new AdminController();
                 view.setVisible(false);
+                login = true;
             }
             else{
-                
+                ArrayList<Petugas> petugas = db.getPetugas();
+                for(Petugas p : petugas){
+                    if(username.equals(p.getIdPetugas()) && password.equals(p.getPassword())){
+//                        new PetugasController();
+//                        view.setVisible(false);
+//                        login = true;
+//                        break;
+                    }
+                }
+            }
+            if(!login){
+                JOptionPane.showMessageDialog(view, "Username atau password salah!");
             }
         }
     }
