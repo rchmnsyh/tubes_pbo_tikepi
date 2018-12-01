@@ -35,7 +35,8 @@ public class MenuPenumpangController extends MouseAdapter implements ActionListe
             view.setVisible(false);
         }
         else if(source.equals(view.getCekTiket())){
-            //
+            new CekTiketController();
+            view.setVisible(false);
         }
         else if(source.equals(view.getLoginAdmin())){
             new LoginController();

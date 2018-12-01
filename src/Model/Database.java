@@ -401,6 +401,27 @@ public class Database {
         return null; 
     }
     
+    public Tiket cekTiket(String kodeTiket){
+       connect();
+        try {
+            String query = "SELECT * FROM tiket WHERE kode_tiket = '" + kodeTiket + "'";
+            rs = stmt.executeQuery(query);
+            if(rs.next()){
+                return new Tiket(rs.getString("kode_tiket"), 
+                                 rs.getString("id_penumpang"), 
+                                 rs.getString("kode_jadwal"), 
+                                 rs.getString("tgl_pesan"), 
+                                 rs.getString("id_kursi"), 
+                                 rs.getString("id_kereta"), 
+                                 rs.getString("harga"));
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        disconnect();
+        return null; 
+    }
+    
     public void addTiket(Tiket t) {
         connect();
         String query = "INSERT INTO tiket VALUES (";
