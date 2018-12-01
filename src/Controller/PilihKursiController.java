@@ -140,7 +140,7 @@ public class PilihKursiController extends MouseAdapter implements ActionListener
             
             db.addPenumpang(new Penumpang(nomorID, jenisID, nama, JK, tglLahir, noHP, email, alamat));
             db.addTiket(baru);
-            JOptionPane.showMessageDialog(view, "Data tiket sukses diinput.");
+            JOptionPane.showMessageDialog(view, "Data tiket sukses diinput." + "\n Kode Tiket: " + kodeTiket + "\n Harga Tiket: " + baru.getHarga());
         }
     }
 }

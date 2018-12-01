@@ -392,7 +392,8 @@ public class Database {
                                                    + " AND kolom_kursi = '" + kolomKursi + "'"
                                                    + " AND baris_kursi = '" + barisKursi + "'";
             rs = stmt.executeQuery(query);
-            if(rs.next()) return rs.getString("status");
+            if(rs.next() && !rs.getString("status").isEmpty()) return rs.getString("status");
+            else return "tidak ada";
         } catch (SQLException ex) {
             Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
         }
