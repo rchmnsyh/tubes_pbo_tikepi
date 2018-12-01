@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 30, 2018 at 03:08 PM
+-- Generation Time: Dec 01, 2018 at 09:50 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 5.6.34
 
@@ -182,110 +182,111 @@ CREATE TABLE `kursi` (
   `id_kursi` char(6) NOT NULL,
   `id_gerbong` char(5) DEFAULT NULL,
   `kolom_kursi` char(1) DEFAULT NULL,
-  `baris_kursi` char(1) DEFAULT NULL
+  `baris_kursi` char(1) DEFAULT NULL,
+  `status` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `kursi`
 --
 
-INSERT INTO `kursi` (`id_kursi`, `id_gerbong`, `kolom_kursi`, `baris_kursi`) VALUES
-('KRS001', 'GK001', '1', '1'),
-('KRS002', 'GK001', '1', '2'),
-('KRS003', 'GK001', '1', '3'),
-('KRS004', 'GK002', '1', '1'),
-('KRS005', 'GK002', '1', '2'),
-('KRS006', 'GK002', '1', '3'),
-('KRS007', 'GK003', '1', '1'),
-('KRS008', 'GK003', '1', '2'),
-('KRS009', 'GK003', '1', '3'),
-('KRS010', 'GK004', '1', '1'),
-('KRS011', 'GK004', '1', '2'),
-('KRS012', 'GK004', '1', '3'),
-('KRS013', 'GK005', '1', '1'),
-('KRS014', 'GK005', '1', '2'),
-('KRS015', 'GK005', '1', '3'),
-('KRS016', 'GK006', '1', '1'),
-('KRS017', 'GK006', '1', '2'),
-('KRS018', 'GK006', '1', '3'),
-('KRS019', 'GK007', '1', '1'),
-('KRS020', 'GK007', '1', '2'),
-('KRS021', 'GK007', '1', '3'),
-('KRS022', 'GK008', '1', '1'),
-('KRS023', 'GK008', '1', '2'),
-('KRS024', 'GK008', '1', '3'),
-('KRS025', 'GK009', '1', '1'),
-('KRS026', 'GK009', '1', '2'),
-('KRS027', 'GK009', '1', '3'),
-('KRS028', 'GK010', '1', '1'),
-('KRS029', 'GK010', '1', '2'),
-('KRS030', 'GK010', '1', '3'),
-('KRS031', 'GK011', '1', '1'),
-('KRS032', 'GK011', '1', '2'),
-('KRS033', 'GK011', '1', '3'),
-('KRS034', 'GK012', '1', '1'),
-('KRS035', 'GK012', '1', '2'),
-('KRS036', 'GK012', '1', '3'),
-('KRS037', 'GK013', '1', '1'),
-('KRS038', 'GK013', '1', '2'),
-('KRS039', 'GK013', '1', '3'),
-('KRS040', 'GK014', '1', '1'),
-('KRS041', 'GK014', '1', '2'),
-('KRS042', 'GK014', '1', '3'),
-('KRS043', 'GK015', '1', '1'),
-('KRS044', 'GK015', '1', '2'),
-('KRS045', 'GK015', '1', '3'),
-('KRS046', 'GK016', '1', '1'),
-('KRS047', 'GK016', '1', '2'),
-('KRS048', 'GK016', '1', '3'),
-('KRS049', 'GK017', '2', '1'),
-('KRS050', 'GK017', '2', '2'),
-('KRS051', 'GK018', '2', '1'),
-('KRS052', 'GK018', '2', '2'),
-('KRS053', 'GK019', '2', '1'),
-('KRS054', 'GK019', '2', '2'),
-('KRS055', 'GK020', '2', '1'),
-('KRS056', 'GK020', '2', '2'),
-('KRS057', 'GK021', '2', '1'),
-('KRS058', 'GK021', '2', '2'),
-('KRS059', 'GK022', '2', '1'),
-('KRS060', 'GK022', '2', '2'),
-('KRS061', 'GK023', '2', '1'),
-('KRS062', 'GK023', '2', '2'),
-('KRS063', 'GK024', '2', '1'),
-('KRS064', 'GK024', '2', '2'),
-('KRS065', 'GK025', '2', '1'),
-('KRS066', 'GK025', '2', '2'),
-('KRS067', 'GK026', '2', '1'),
-('KRS068', 'GK026', '2', '2'),
-('KRS069', 'GK027', '2', '1'),
-('KRS070', 'GK027', '2', '2'),
-('KRS071', 'GK028', '2', '1'),
-('KRS072', 'GK028', '2', '2'),
-('KRS073', 'GK029', '1', '1'),
-('KRS074', 'GK029', '2', '1'),
-('KRS075', 'GK030', '3', '1'),
-('KRS076', 'GK030', '1', '2'),
-('KRS077', 'GK031', '2', '2'),
-('KRS078', 'GK031', '3', '2'),
-('KRS079', 'GK032', '1', '1'),
-('KRS080', 'GK032', '2', '1'),
-('KRS081', 'GK033', '3', '1'),
-('KRS082', 'GK033', '1', '2'),
-('KRS083', 'GK034', '2', '2'),
-('KRS084', 'GK034', '3', '2'),
-('KRS085', 'GK035', '1', '1'),
-('KRS086', 'GK035', '2', '1'),
-('KRS087', 'GK036', '3', '1'),
-('KRS088', 'GK036', '1', '2'),
-('KRS089', 'GK037', '2', '2'),
-('KRS090', 'GK037', '3', '2'),
-('KRS091', 'GK038', '1', '1'),
-('KRS092', 'GK038', '2', '1'),
-('KRS093', 'GK039', '3', '1'),
-('KRS094', 'GK039', '1', '2'),
-('KRS095', 'GK040', '2', '2'),
-('KRS096', 'GK040', '3', '2');
+INSERT INTO `kursi` (`id_kursi`, `id_gerbong`, `kolom_kursi`, `baris_kursi`, `status`) VALUES
+('KRS001', 'GK001', '1', '1', 'Tersedia'),
+('KRS002', 'GK001', '1', '2', 'Tersedia'),
+('KRS003', 'GK001', '1', '3', 'Tersedia'),
+('KRS004', 'GK002', '1', '1', 'Tersedia'),
+('KRS005', 'GK002', '1', '2', 'Tersedia'),
+('KRS006', 'GK002', '1', '3', 'Tersedia'),
+('KRS007', 'GK003', '1', '1', 'Tersedia'),
+('KRS008', 'GK003', '1', '2', 'Tersedia'),
+('KRS009', 'GK003', '1', '3', 'Tersedia'),
+('KRS010', 'GK004', '1', '1', 'Tersedia'),
+('KRS011', 'GK004', '1', '2', 'Tersedia'),
+('KRS012', 'GK004', '1', '3', 'Tersedia'),
+('KRS013', 'GK005', '1', '1', 'Tersedia'),
+('KRS014', 'GK005', '1', '2', 'Tersedia'),
+('KRS015', 'GK005', '1', '3', 'Tersedia'),
+('KRS016', 'GK006', '1', '1', 'Tersedia'),
+('KRS017', 'GK006', '1', '2', 'Tersedia'),
+('KRS018', 'GK006', '1', '3', 'Tersedia'),
+('KRS019', 'GK007', '1', '1', 'Tersedia'),
+('KRS020', 'GK007', '1', '2', 'Tersedia'),
+('KRS021', 'GK007', '1', '3', 'Tersedia'),
+('KRS022', 'GK008', '1', '1', 'Tersedia'),
+('KRS023', 'GK008', '1', '2', 'Tersedia'),
+('KRS024', 'GK008', '1', '3', 'Tersedia'),
+('KRS025', 'GK009', '1', '1', 'Tersedia'),
+('KRS026', 'GK009', '1', '2', 'Tersedia'),
+('KRS027', 'GK009', '1', '3', 'Tersedia'),
+('KRS028', 'GK010', '1', '1', 'Tersedia'),
+('KRS029', 'GK010', '1', '2', 'Tersedia'),
+('KRS030', 'GK010', '1', '3', 'Tersedia'),
+('KRS031', 'GK011', '1', '1', 'Tersedia'),
+('KRS032', 'GK011', '1', '2', 'Tersedia'),
+('KRS033', 'GK011', '1', '3', 'Tersedia'),
+('KRS034', 'GK012', '1', '1', 'Tersedia'),
+('KRS035', 'GK012', '1', '2', 'Tersedia'),
+('KRS036', 'GK012', '1', '3', 'Tersedia'),
+('KRS037', 'GK013', '1', '1', 'Tersedia'),
+('KRS038', 'GK013', '1', '2', 'Tersedia'),
+('KRS039', 'GK013', '1', '3', 'Tersedia'),
+('KRS040', 'GK014', '1', '1', 'Tersedia'),
+('KRS041', 'GK014', '1', '2', 'Tersedia'),
+('KRS042', 'GK014', '1', '3', 'Tersedia'),
+('KRS043', 'GK015', '1', '1', 'Tersedia'),
+('KRS044', 'GK015', '1', '2', 'Tersedia'),
+('KRS045', 'GK015', '1', '3', 'Tersedia'),
+('KRS046', 'GK016', '1', '1', 'Tersedia'),
+('KRS047', 'GK016', '1', '2', 'Tersedia'),
+('KRS048', 'GK016', '1', '3', 'Tersedia'),
+('KRS049', 'GK017', '2', '1', 'Tersedia'),
+('KRS050', 'GK017', '2', '2', 'Tersedia'),
+('KRS051', 'GK018', '2', '1', 'Tersedia'),
+('KRS052', 'GK018', '2', '2', 'Tersedia'),
+('KRS053', 'GK019', '2', '1', 'Tersedia'),
+('KRS054', 'GK019', '2', '2', 'Tersedia'),
+('KRS055', 'GK020', '2', '1', 'Tersedia'),
+('KRS056', 'GK020', '2', '2', 'Tersedia'),
+('KRS057', 'GK021', '2', '1', 'Tersedia'),
+('KRS058', 'GK021', '2', '2', 'Tersedia'),
+('KRS059', 'GK022', '2', '1', 'Tersedia'),
+('KRS060', 'GK022', '2', '2', 'Tersedia'),
+('KRS061', 'GK023', '2', '1', 'Tersedia'),
+('KRS062', 'GK023', '2', '2', 'Tersedia'),
+('KRS063', 'GK024', '2', '1', 'Tersedia'),
+('KRS064', 'GK024', '2', '2', 'Tersedia'),
+('KRS065', 'GK025', '2', '1', 'Tersedia'),
+('KRS066', 'GK025', '2', '2', 'Tersedia'),
+('KRS067', 'GK026', '2', '1', 'Tersedia'),
+('KRS068', 'GK026', '2', '2', 'Tersedia'),
+('KRS069', 'GK027', '2', '1', 'Tersedia'),
+('KRS070', 'GK027', '2', '2', 'Tersedia'),
+('KRS071', 'GK028', '2', '1', 'Tersedia'),
+('KRS072', 'GK028', '2', '2', 'Tersedia'),
+('KRS073', 'GK029', '1', '1', 'Tersedia'),
+('KRS074', 'GK029', '2', '1', 'Tersedia'),
+('KRS075', 'GK030', '3', '1', 'Tersedia'),
+('KRS076', 'GK030', '1', '2', 'Tersedia'),
+('KRS077', 'GK031', '2', '2', 'Tersedia'),
+('KRS078', 'GK031', '3', '2', 'Tersedia'),
+('KRS079', 'GK032', '1', '1', 'Tersedia'),
+('KRS080', 'GK032', '2', '1', 'Tersedia'),
+('KRS081', 'GK033', '3', '1', 'Tersedia'),
+('KRS082', 'GK033', '1', '2', 'Tersedia'),
+('KRS083', 'GK034', '2', '2', 'Tersedia'),
+('KRS084', 'GK034', '3', '2', 'Tersedia'),
+('KRS085', 'GK035', '1', '1', 'Tersedia'),
+('KRS086', 'GK035', '2', '1', 'Tersedia'),
+('KRS087', 'GK036', '3', '1', 'Tersedia'),
+('KRS088', 'GK036', '1', '2', 'Tersedia'),
+('KRS089', 'GK037', '2', '2', 'Tersedia'),
+('KRS090', 'GK037', '3', '2', 'Tersedia'),
+('KRS091', 'GK038', '1', '1', 'Tersedia'),
+('KRS092', 'GK038', '2', '1', 'Tersedia'),
+('KRS093', 'GK039', '3', '1', 'Tersedia'),
+('KRS094', 'GK039', '1', '2', 'Tersedia'),
+('KRS095', 'GK040', '2', '2', 'Tersedia'),
+('KRS096', 'GK040', '3', '2', 'Tersedia');
 
 -- --------------------------------------------------------
 
@@ -300,7 +301,7 @@ CREATE TABLE `penumpang` (
   `jenis_kelamin` char(1) DEFAULT NULL,
   `tgl_lahir` date DEFAULT NULL,
   `no_hp` varchar(15) DEFAULT NULL,
-  `email` varchar(30) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
   `alamat` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -328,7 +329,8 @@ INSERT INTO `penumpang` (`id_penumpang`, `tipe_id`, `nama`, `jenis_kelamin`, `tg
 ('1234567890987654377', 'SIM', 'Melvin Palindang', 'L', '1983-12-13', '(+62) 524-3451', 'Melvin@gjlil.com', 'Jl Arteri Kelapa Dua II Bl B/40,Kebon Jeruk'),
 ('1234567890987654385', 'Paspor', 'Rampean Tanja', 'L', '1980-02-13', '(+62) 218-3296', 'Rampean@gjlil.com', 'jl.Dr Muwardi no.7, Bali'),
 ('1234567890987654392', 'SIM', 'Yohana Kalija', 'L', '1983-04-24', '(+62) 291-5441', 'Yohana@gjlil.com', 'Jl. Raya Berbek 46 Waru'),
-('1234567890987654394', 'Paspor', 'Rizky Amba', 'L', '1990-02-11', '(+62) 348-1121', 'Rizky@gjlil.com', 'Jl Kendal 22,Menteng');
+('1234567890987654394', 'Paspor', 'Rizky Amba', 'L', '1990-02-11', '(+62) 348-1121', 'Rizky@gjlil.com', 'Jl Kendal 22,Menteng'),
+('1301170066', 'KTP', 'Rachmansyah Adhi Widhianto', 'L', '1999-04-02', '089696969147', 'rachmansyah@student.telkomuniversity.ac.id', 'Moment of truth');
 
 -- --------------------------------------------------------
 
@@ -344,34 +346,35 @@ CREATE TABLE `petugas` (
   `no_hp` varchar(15) DEFAULT NULL,
   `email` varchar(30) DEFAULT NULL,
   `alamat` varchar(100) DEFAULT NULL,
-  `lama_kerja` double DEFAULT NULL
+  `password` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `petugas`
 --
 
-INSERT INTO `petugas` (`id_petugas`, `nama`, `jenis_kelamin`, `tgl_lahir`, `no_hp`, `email`, `alamat`, `lama_kerja`) VALUES
-('PTGS0001', 'Arya Asoka', 'L', '1983-01-11', '(+62) 648-8959', 'Arya@grmal.com', 'Jl Imam Bonjol 61 Plaza Bumi Daya Lt 11,Menteng', 5),
-('PTGS0002', 'Aditya Abimanyu', 'L', '1984-02-21', '(+62) 977-0247', 'Aditya@grmal.com', 'Kediri, Tabanan, Bali', 4),
-('PTGS0003', 'Arjuna Basudewa', 'L', '1993-04-02', '(+62) 867-2478', 'Arjuna@grmal.com', 'Jl Industri Slt IV Kawasan Industri Jababeka Tahap II Bl GG-5', 3),
-('PTGS0004', 'Birendra Birawa', 'L', '1973-03-07', '(+62) 401-6385', 'Birendra@grmal.com', 'Jl Tarum Brt Ruko Puri Sentra Niaga Bl A/9,Cipinang Melayu', 5),
-('PTGS0005', 'Bimasena Barata', 'L', '1984-12-03', '(+62) 393-7553', 'Bimasena@grmal.com', 'Jalan Penggilingan Raya no.579 Cakung-Jakarta Timur', 8),
-('PTGS0006', 'Chandra Aji', 'L', '1980-10-12', '(+62) 958-0161', 'Chandra@grmal.com', 'Jl Lombok I Kawasan Industri MM 2100 Bl N/10-11', 8),
-('PTGS0007', 'Ekata Dananjaya', 'L', '1992-04-18', '(+62) 590-0380', 'Ekata@grmal.com', 'Perkantoran Plaza Pasifik Blok B3 No. 71, Jalan Raya Boulevard Barat. Kelapa Gading, Dki Jakarta', 5),
-('PTGS0008', 'Indra Hara', 'L', '1982-02-17', '(+62) 940-3218', 'Indra@grmal.com', 'Jl. Raya Ciater - BSD No.41', 3),
-('PTGS0009', 'Janu Kalya', 'L', '1966-06-12', '(+62) 505-2629', 'Janu@grmal.com', 'Jl. Raya Hankam No. 1 C', 6),
-('PTGS0010', 'Kamal Irawan', 'L', '1978-08-24', '(+62) 914-0095', 'Kamal@grmal.com', 'Jl Bukit Barisan Dlm 3, Sumatera Utara, 20111', 7),
-('PTGS0011', 'Mahesa Mahabala', 'L', '1980-02-12', '(+62) 481-8558', 'Mahesa@grmal.com', 'Jl.Rambutan Timur VIII no.226', 5),
-('PTGS0012', 'Tarendra Tanwira', 'L', '1992-07-16', '(+62) 980-5207', 'Tarendra@grmal.com', 'Jl Sultan Iskandar Muda Kav 30 Wisma Sentosa 12240', 6),
-('PTGS0013', 'Wira Widipa', 'L', '1982-02-17', '(+62) 686-2614', 'Wira@grmal.com', 'Banjar Dinas Melanting, Kec.Banjar', 6),
-('PTGS0014', 'Yasa Wijaya', 'L', '1994-11-03', '(+62) 787-9958', 'Yasa@grmal.com', 'Jl Cikini Raya Raya 84 RT RT 016/01,Cikini', 7),
-('PTGS0015', 'Yudistira Simanjuntak', 'L', '1986-03-02', '(+62) 945-9234', 'Yudistira@grmal.com', 'Jl Boulevard Artha Gading Rukan Artha Gading Niaga Bl F/21', 8),
-('PTGS0016', 'Adeen Abraham', 'L', '1998-12-01', '(+62) 408-1652', 'Adeen@grmal.com', 'Komplek Rukan Graha Cempaka Mas C 2 / 14, Jl. Letjend. Suprapto (Cempaka Mas Timur), Jakarta Pusat', 5),
-('PTGS0017', 'Bryan Christopher', 'L', '1997-09-15', '(+62) 899-1493', 'Bryan@grmal.com', 'Jl Pasanggrahan Raya 3-B,Meruya Ilir', 2),
-('PTGS0018', 'Ethan Frumentius', 'L', '1972-04-01', '(+62) 854-3835', 'Ethan@grmal.com', 'L-haj Shamsuddin Mansion (2nd Floor), 17', 3),
-('PTGS0019', 'Isaac Immanuel', 'L', '1982-05-13', '(+62) 872-2828', 'Isaac@grmal.com', 'Jl Pejuangan,Kebon Jeruk', 4),
-('PTGS0020', 'Ian Ismael', 'L', '1975-08-24', '(+62) 697-7867', 'Ian@grmal.com', 'Ampera 3 no 8 Daerah Khusus Ibukota Jakarta', 2);
+INSERT INTO `petugas` (`id_petugas`, `nama`, `jenis_kelamin`, `tgl_lahir`, `no_hp`, `email`, `alamat`, `password`) VALUES
+('PTGS0000', 'Dummy', 'X', '1945-08-17', NULL, NULL, NULL, 'Password'),
+('PTGS0001', 'Arya Asoka', 'L', '1983-01-11', '(+62) 648-8959', 'Arya@grmal.com', 'Jl Imam Bonjol 61 Plaza Bumi Daya Lt 11,Menteng', 'Password'),
+('PTGS0002', 'Aditya Abimanyu', 'L', '1984-02-21', '(+62) 977-0247', 'Aditya@grmal.com', 'Kediri, Tabanan, Bali', 'Password'),
+('PTGS0003', 'Arjuna Basudewa', 'L', '1993-04-02', '(+62) 867-2478', 'Arjuna@grmal.com', 'Jl Industri Slt IV Kawasan Industri Jababeka Tahap II Bl GG-5', 'Password'),
+('PTGS0004', 'Birendra Birawa', 'L', '1973-03-07', '(+62) 401-6385', 'Birendra@grmal.com', 'Jl Tarum Brt Ruko Puri Sentra Niaga Bl A/9,Cipinang Melayu', 'Password'),
+('PTGS0005', 'Bimasena Barata', 'L', '1984-12-03', '(+62) 393-7553', 'Bimasena@grmal.com', 'Jalan Penggilingan Raya no.579 Cakung-Jakarta Timur', 'Password'),
+('PTGS0006', 'Chandra Aji', 'L', '1980-10-12', '(+62) 958-0161', 'Chandra@grmal.com', 'Jl Lombok I Kawasan Industri MM 2100 Bl N/10-11', 'Password'),
+('PTGS0007', 'Ekata Dananjaya', 'L', '1992-04-18', '(+62) 590-0380', 'Ekata@grmal.com', 'Perkantoran Plaza Pasifik Blok B3 No. 71, Jalan Raya Boulevard Barat. Kelapa Gading, Dki Jakarta', 'Password'),
+('PTGS0008', 'Indra Hara', 'L', '1982-02-17', '(+62) 940-3218', 'Indra@grmal.com', 'Jl. Raya Ciater - BSD No.41', 'Password'),
+('PTGS0009', 'Janu Kalya', 'L', '1966-06-12', '(+62) 505-2629', 'Janu@grmal.com', 'Jl. Raya Hankam No. 1 C', 'Password'),
+('PTGS0010', 'Kamal Irawan', 'L', '1978-08-24', '(+62) 914-0095', 'Kamal@grmal.com', 'Jl Bukit Barisan Dlm 3, Sumatera Utara, 20111', 'Password'),
+('PTGS0011', 'Mahesa Mahabala', 'L', '1980-02-12', '(+62) 481-8558', 'Mahesa@grmal.com', 'Jl.Rambutan Timur VIII no.226', 'Password'),
+('PTGS0012', 'Tarendra Tanwira', 'L', '1992-07-16', '(+62) 980-5207', 'Tarendra@grmal.com', 'Jl Sultan Iskandar Muda Kav 30 Wisma Sentosa 12240', 'Password'),
+('PTGS0013', 'Wira Widipa', 'L', '1982-02-17', '(+62) 686-2614', 'Wira@grmal.com', 'Banjar Dinas Melanting, Kec.Banjar', 'Password'),
+('PTGS0014', 'Yasa Wijaya', 'L', '1994-11-03', '(+62) 787-9958', 'Yasa@grmal.com', 'Jl Cikini Raya Raya 84 RT RT 016/01,Cikini', 'Password'),
+('PTGS0015', 'Yudistira Simanjuntak', 'L', '1986-03-02', '(+62) 945-9234', 'Yudistira@grmal.com', 'Jl Boulevard Artha Gading Rukan Artha Gading Niaga Bl F/21', 'Password'),
+('PTGS0016', 'Adeen Abraham', 'L', '1998-12-01', '(+62) 408-1652', 'Adeen@grmal.com', 'Komplek Rukan Graha Cempaka Mas C 2 / 14, Jl. Letjend. Suprapto (Cempaka Mas Timur), Jakarta Pusat', 'Password'),
+('PTGS0017', 'Bryan Christopher', 'L', '1997-09-15', '(+62) 899-1493', 'Bryan@grmal.com', 'Jl Pasanggrahan Raya 3-B,Meruya Ilir', 'Password'),
+('PTGS0018', 'Ethan Frumentius', 'L', '1972-04-01', '(+62) 854-3835', 'Ethan@grmal.com', 'L-haj Shamsuddin Mansion (2nd Floor), 17', 'Password'),
+('PTGS0019', 'Isaac Immanuel', 'L', '1982-05-13', '(+62) 872-2828', 'Isaac@grmal.com', 'Jl Pejuangan,Kebon Jeruk', 'Password'),
+('PTGS0020', 'Ian Ismael', 'L', '1975-08-24', '(+62) 697-7867', 'Ian@grmal.com', 'Ampera 3 no 8 Daerah Khusus Ibukota Jakarta', 'Password');
 
 -- --------------------------------------------------------
 
@@ -429,6 +432,13 @@ CREATE TABLE `tiket` (
   `tgl_pesan` date DEFAULT NULL,
   `harga` double DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tiket`
+--
+
+INSERT INTO `tiket` (`kode_tiket`, `id_penumpang`, `id_petugas`, `kode_jadwal`, `id_kursi`, `id_kereta`, `tgl_pesan`, `harga`) VALUES
+('TIX001', '1301170066', 'PTGS0000', 'JD011', 'KRS005', 'KA008', '2018-12-01', 300000);
 
 --
 -- Indexes for dumped tables
