@@ -35,6 +35,8 @@ public class Database {
     private ArrayList<Petugas> petugas = new ArrayList<>();
     private ArrayList<Kursi> kursi = new ArrayList<>();
     
+    private ArrayList<Tiket> tiket = new ArrayList<>();
+    
     public Database(){
         loadJadwal();
         loadStasiun();
@@ -42,6 +44,7 @@ public class Database {
         loadKereta();
         loadKursi();
         loadPetugas();
+        loadTiket();
     }
     
     public void connect(){
@@ -189,6 +192,26 @@ public class Database {
         disconnect();
     }
     
+    public void loadTiket() {
+        connect();
+        try {
+            String query = "SELECT * FROM tiket WHERE id_petugas = 'PTGS0000'";
+            rs = stmt.executeQuery(query);
+            while (rs.next()){
+                tiket.add(new Tiket(rs.getString("kode_tiket"), 
+                                    rs.getString("id_penumpang"),
+                                    rs.getString("kode_jadwal"), 
+                                    rs.getString("tgl_pesan"),
+                                    rs.getString("id_kursi"),
+                                    rs.getString("id_kereta"),
+                                    rs.getString("harga")));
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        disconnect();
+    }
+    
     public ArrayList<Stasiun> getStasiun() {
         return stasiun;
     }
@@ -211,6 +234,10 @@ public class Database {
     
     public ArrayList<Gerbong> getGerbong() {
         return gerbong;
+    }
+    
+    public ArrayList<Tiket> getTiket(){
+        return tiket;
     }
     
     public void loadJadwalSearch(String tglBerangkat, String stasiunAsal, String stasiunTujuan){
@@ -316,6 +343,21 @@ public class Database {
         return null;
     }
     
+    public String GetNamaPenumpang(String idPenumpang){
+        connect();
+        try {
+            String query = "SELECT nama FROM penumpang WHERE id_penumpang = '" + idPenumpang + "'";
+            rs = stmt.executeQuery(query);
+            if(rs.next()){
+                return rs.getString("nama");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        disconnect();
+        return null;
+    }
+    
     public String GetIDKeretaFromKodeJadwal(String kodeJadwal){
         connect();
         try {
@@ -401,6 +443,21 @@ public class Database {
         return null; 
     }
     
+    public boolean updateTiket(String kodeTiket, String idPetugas){
+        connect();
+        String query = "UPDATE tiket SET";
+        query += " id_petugas = '" + idPetugas + "'";
+        query += " WHERE kode_tiket = '" + kodeTiket + "'";
+        if (manipulate(query)){
+            disconnect();
+            return true;
+        }
+        else{
+            disconnect();
+            return false;
+        } 
+    }
+    
     public Tiket cekTiket(String kodeTiket){
        connect();
         try {
@@ -420,6 +477,21 @@ public class Database {
         }
         disconnect();
         return null; 
+    }
+    
+    public boolean cekAkun(String username, String password){
+       connect();
+        try {
+            String query = "SELECT * FROM petugas WHERE id_petugas = '" + username + "' AND password = '" + password + "'";
+            rs = stmt.executeQuery(query);
+            if(rs.next()){
+                return true;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        disconnect();
+        return false; 
     }
     
     public void addTiket(Tiket t) {

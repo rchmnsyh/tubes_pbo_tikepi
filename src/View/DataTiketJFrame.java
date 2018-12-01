@@ -288,8 +288,6 @@ public class DataTiketJFrame extends javax.swing.JFrame {
     private com.toedter.calendar.JDateChooser tglBerangkat;
     // End of variables declaration//GEN-END:variables
 
-    
-    
     public void addActionListener(ActionListener x){
         btnCari.addActionListener(x);
         btnLanjut.addActionListener(x);

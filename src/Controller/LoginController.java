@@ -43,14 +43,10 @@ public class LoginController extends MouseAdapter implements ActionListener{
                 login = true;
             }
             else{
-                ArrayList<Petugas> petugas = db.getPetugas();
-                for(Petugas p : petugas){
-                    if(username.equals(p.getIdPetugas()) && password.equals(p.getPassword())){
-//                        new PetugasController();
-//                        view.setVisible(false);
-//                        login = true;
-//                        break;
-                    }
+                if(db.cekAkun(username, password)){
+                    new PetugasController(username);
+                    view.setVisible(false);
+                    login = true;
                 }
             }
             if(!login){
