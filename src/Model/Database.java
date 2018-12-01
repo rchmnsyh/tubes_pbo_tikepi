@@ -24,8 +24,13 @@ public class Database {
     private ResultSet rs = null;
     
     private ArrayList<Stasiun> stasiun = new ArrayList<>();
+   
     private ArrayList<Jadwal> jadwal = new ArrayList<>();
+    private ArrayList<Jadwal> jadwalSearch = new ArrayList<>();
+    
     private ArrayList<Gerbong> gerbong = new ArrayList<>();
+    private ArrayList<Gerbong> gerbongByIDKereta = new ArrayList<>();
+    
     private ArrayList<Kereta> kereta = new ArrayList<>();
     private ArrayList<Petugas> petugas = new ArrayList<>();
     private ArrayList<Kursi> kursi = new ArrayList<>();
@@ -204,10 +209,9 @@ public class Database {
         return kursi;
     }
     
-    public ArrayList<Jadwal> getJadwalSearch() {
-        return jadwal;
+    public ArrayList<Gerbong> getGerbong() {
+        return gerbong;
     }
-    
     
     public void loadJadwalSearch(String tglBerangkat, String stasiunAsal, String stasiunTujuan){
         connect();
@@ -219,7 +223,7 @@ public class Database {
             
             rs = stmt.executeQuery(query);
             while (rs.next()){
-                jadwal.add(new Jadwal(rs.getString("kode_jadwal"), 
+                jadwalSearch.add(new Jadwal(rs.getString("kode_jadwal"), 
                                       rs.getString("id_kereta"),
                                       rs.getString("stasiun_asal"), 
                                       rs.getString("stasiun_tujuan"), 
@@ -233,13 +237,18 @@ public class Database {
         disconnect();
     }
     
-    public void loadGerbong(String idKereta) {
+    public ArrayList<Jadwal> getJadwalSearch() {
+        return jadwalSearch;
+    }    
+
+    
+    public void loadGerbongByIDKereta(String idKereta) {
         connect();
         try {
             String query = "SELECT * FROM gerbong WHERE id_kereta = '" + idKereta + "'";
             rs = stmt.executeQuery(query);
             while (rs.next()){
-                gerbong.add(new Gerbong(rs.getString("id_gerbong"), 
+                gerbongByIDKereta.add(new Gerbong(rs.getString("id_gerbong"), 
                                         rs.getString("id_kereta"),
                                         Integer.parseInt(rs.getString("nomor_gerbong")), 
                                         rs.getString("status"), 
@@ -251,8 +260,8 @@ public class Database {
         disconnect();
     }
     
-    public ArrayList<Gerbong> getGerbong() {
-        return gerbong;
+    public ArrayList<Gerbong> getGerbongByIDKereta(){
+        return gerbongByIDKereta;
     }
     
     public void loadBarisKolom(String idGerbong) {

@@ -40,8 +40,9 @@ public class PilihKursiController extends MouseAdapter implements ActionListener
     }
     
     public void loadGerbong(){
-        db.loadGerbong(baru.getIdKereta());
-        ArrayList<Gerbong> gerbong = db.getGerbong();
+        System.out.println(baru.getIdKereta());
+        db.loadGerbongByIDKereta(baru.getIdKereta());
+        ArrayList<Gerbong> gerbong = db.getGerbongByIDKereta();
         for(Gerbong g : gerbong){
             id_gerbong.add(g.getIdGerbong());
             view.setGerbong(String.valueOf(g.getNoGerbong()));
